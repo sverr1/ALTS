@@ -1,0 +1,26 @@
+# ALTS2 - Automated Lecture Transcription & Summary
+# Python dependencies
+
+# Core transcription
+whisperx>=3.1.1
+faster-whisper>=1.0.0
+
+# AI processing
+openai>=1.0.0
+
+# Environment & config
+python-dotenv>=1.0.0
+
+# PyTorch (CUDA support)
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# CUDA libraries (auto-installed with PyTorch)
+nvidia-cublas-cu12
+nvidia-cudnn-cu12
+
+# Audio processing
+pyannote.audio>=3.0.0
+
+# Optional: yt-dlp (can also be installed via system package manager)
+# yt-dlp>=2023.0.0

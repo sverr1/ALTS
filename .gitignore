@@ -1,0 +1,36 @@
+# Environment
+venv/
+.env
+
+# Sensitive files
+cookies.txt
+
+# Downloads (large audio/video files - not needed in Git)
+downloads/
+
+# Audio/video files anywhere
+*.mp3
+*.mp4
+
+# Temporary backup files
+*~
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

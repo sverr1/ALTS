@@ -1,0 +1,585 @@
+ Intensiteten på löjset, gott nok, eller ska jag ändra på detta?
+Det är bra?
+Herregud.
+Och löjdet, är det för högt eller för lavt?
+Det är bra.
+Ni får korrigera mig under föreläsningens gång ifall det inte känns behagligt.
+Yes.
+ Idag ska jag begynna att snacka på om kapitel nummer åtta som handlar om syra och baser.
+I will define acid and bases in two ways.
+The first definition for acid and bases, it is called Arrhenius definition.
+A later definition of
+ acids and bases, it was made by Brønstedt.
+And if I've done my job correctly when I define acid and bases, you will realize a significant difference in between the definition by following Arrhenius or Brønstedt.
+Because according to Arrhenius,
+ an acid on a base can only exist in water.
+In Brønsted's definition, it can exist in other mediums than water.
+And I hope this will be clear in a while, and I will return to this.
+But let us start talking about Arrhenius' definition of an
+ acid.
+When Arrhenius, Svante Arrhenius, defined an acid he said an acid it is a substance that number one contains hydrogen and number two increase the concentration of hydronium ions when it is dissolved.
+So let us write down the definition of an Arrhenius acid.
+A substance
+ that contains hydrogen and increase concentration of
+ hydronium ions when dissolved in water.
+ So what example do we have of a compound which is defined as an acid by Svante Arrhenius?
+One such example, it is this molecule, which looks like this.
+And this compound is called hydrogen chloride.
+And hydrogen chloride, it is a gas.
+ And on this reaction arrow, I draw a molecule of water, which means that this hydrogen chloride is dissolved in water.
+And what is going to happen when we add hydrogen chloride gas to water?
+It is that this gas, it will react by the water, and we generate this chloride ion,
+ This AQ, it stands for aqueous, which means that the chloride ion is dissolved in water.
+And the other substance we are generating, it is this ion here, which is the hydronium ion.
+AQ, it tells us that hydronium ion is dissolved in water.
+And then we return to the definition of an Arrhenius acid.
+ Number one, it should contain hydrogen.
+And it does.
+It contains hydrogen.
+So it satisfies the first part of the definition.
+And when we dissolve this hydrogen chloride in water, we increase the concentration of this ion in the water.
+ I am not really sure that this is clear for everybody, so I will try to explain this in an alternative way.
+So what I do here, it is that here I have a beaker of water.
+So in this beaker, I have this water present.
+And in this beaker, I have plenty of water molecules.
+ like this.
+And to this beaker, I add this gas, hydrogen chloride.
+And what is going to happen now, it is that the hydrogen chloride is going to react by the water molecules in this beaker.
+So you get something like this.
+So you still have water molecules present because you have a huge excess of water compared to hydrogen chloride.
+ And perhaps one of the water molecules has reacted with the hydrogen chloride to generate this hydronium ion.
+And this chloride ion is dissolved in this solution here.
+ Perhaps it makes more sense to present it like this, that hydrogen chloride increases the concentration of hydronium ions in water.
+Another example of a compound which satisfies Arrhenius' definition of an acid, it is this guy here.
+Anybody who knows the name of this molecule?
+Norwegian or English?
+ In Norwegian it is called ettigsyra, and in English it's called acetic acid.
+So when we have this molecule dissolved in water, what is going to happen here
+ it is that acetic acid to some extent is going to react by the water to generate hydronium ions and acetate ions.
+And when I say some extent, I will come back to that later on this lecture.
+So what you're going to generate here, it is this ion, which is called an acetate ion.
+And then we produce the hydronium ions
+ which increase the concentration of hydronium ions in the water.
+And this acetate ion, it is also dissolved in water, which is indicated by a Q here for aqueous.
+So that is Arrhenius acid.
+And Arrhenius, he didn't stop to define an acid.
+He also defined a base.
+ And just one thing I forgot here.
+Here, it will be a double arrow.
+And this double arrow, I will return to that later, so just take it easy.
+Arrhenius base.
+A substance that increase the concentration of hydroxide ions in water.
+So I write it that arrhenius base is a substance
+ which increases concentration of hydroxide ions
+ And hydroxide ion, you should know how it looks like.
+It looks like this, OH minus in water.
+And what type of compounds do we have that satisfied Arrhenius base definition?
+I think, I'm not sure, but I think the most typical example
+ It is this molecule, sodium hydroxide, and that is a solid substance.
+It's a solid.
+And when sodium chloride, sorry, when sodium hydroxide is dissolved in water, what is going to happen here?
+ Remember what I told you before, that this here is an ionic compound like this.
+So when this compound here is dissolved in water, what is going to happen, it is that the sodium ion is going to be separated from the hydroxide ion.
+So in the water solution, you will have sodium ions which are dissolved in the water.
+ and you also get these hydroxide ions dissolved in water.
+So these hydroxide ions, they contribute to an increase in the concentration of hydroxide ions in water, which means that sodium hydroxide is an example of a base according to Arrhenius.
+Another example of a compound which is a base according to Arrhenius
+ It is this molecule here.
+And this molecule, it has a terrible smell.
+And the name of that molecule is ammoniac in Norwegian.
+I think it's pronounced like that.
+Or ammonia in English.
+And what is happening when we dissolve ammonia in water, it is the following.
+ that water, it reacts with ammonia.
+So what we are producing here, it is an ammonium ion,
+ which is dissolved in water, plus hydroxide ions, which are dissolved in water.
+So ammonia, it is also a base, according to Arrhenius, because it increased the concentration of hydroxide ions in water.
+And here, I should use a double arrow.
+I will return to why I'm using a double arrow a bit later.
+ So it was Arrhenius' definition.
+And I said in the beginning of this lecture that according to Arrhenius, a base and an acid can only exist in water.
+And I hope it makes sense at this point why it is like this.
+ Because according to Arrhenius, an acid, it increased the concentration of hydronium ions in water.
+And if you want to increase the concentration of hydronium ions in water, it means that an acid is only an acid in the presence of water according to Arrhenius.
+And for the same logic, a base is only a base in the presence of water according to Arrhenius' base definition.
+ a more broad definition of acid and bases.
+It was made by a Danish guy, Brønstedt.
+And Brønstedt, he defines acids in the following way.
+I will indicate Brønstedt acid by BA from now.
+According to Brønstedt,
+ an acid is a substance that gives away a proton.
+A substance that gives away a proton.
+ Proton is written as H plus.
+And why do I use H plus to indicate a proton?
+Does it make sense?
+I think it does.
+Because if you look at a hydrogen proton, sorry, a hydrogen atom, it looks like this.
+It has one proton in the nucleus.
+And
+ It has one electron in the orbit around the nucleus.
+But if this electron disappear, we get H plus.
+And what remains now, it is only a proton.
+So that's why we use H plus to indicate a proton.
+So what examples do we have of an Brønstedt acid?
+ One example, it is this molecule.
+And I said before that acetic acid is an Arrhenius acid as well.
+But Brønstedt also defined acetic acid as an acid, not because it increased the concentration of hydronium ions in water, but because it gives away
+ a proton to another molecule.
+So acetic acid, it gives away a proton to water.
+So that's why it is an acid according to Arrhenius.
+Sorry, Brønstedt.
+And we can also have the following reaction that we have acetic acid.
+ reacting with ammonia.
+What is happening here, it is that acetic acid, it gives away a proton.
+So we generate the acetate ion and the ammonium ion.
+So here it is a Brønstedt acid in the first case, and in the second case it is a Brønstedt acid.
+ And we can also take this as an example again, that we have the gas of hydrogen chloride.
+And this gas, it reacts by water.
+ And what is going to happen now, it is that hydrogen chloride, it gives away a proton.
+So according to Brønstedt, hydrogen chloride is an acid because it gives away a proton, not because it increased the concentration of hydronium ions in water.
+So we get...
+ chloride ions and we get hydronium ions in this reaction.
+And also Brønstedt, he defined a base.
+ And I'm going to use BB to indicate the Brønstedt base from now on.
+And a Brønstedt base, it is a substance that accept a proton from another substance.
+The substance that accept
+ from another substance.
+So we can imagine this reaction here.
+But here we have this molecule,
+ which you have seen before in this lecture, which we call for acetic acid.
+This molecule here, we have also seen earlier in this lecture, which is called ammonia.
+And when those two react with each other, they generate this negative ion, which is called an acetate ion.
+And we also generate an ammonium ion.
+ which of the compounds in this reaction is the Brønstedt base.
+Here we have NH3.
+Here we have NH4+.
+So that means that,
+ ammonia, it has accepted a proton from another substance, which is acetic acid in this case.
+So that means that ammonia, it is a base according to Brønsted definition.
+If we look at this reaction here, is ammonia a base in this reaction according to Arrhenius definition?
+ The answer is no, because we have no water present.
+So in Brønstedt definition of acid and bases, an acid can be an acid without the presence of water.
+And a base can be a base without the presence of water, according to Brønstedt.
+But in Arrhenius definition, we need water present for a compound to be either an acid or a base.
+ So I turn off the microphone for one minute.
+ Yes.
+So before I turn off the microphone, I said that Brønstedt acid is a substance which gives away a proton.
+Brønstedt base is a compound that accepts a proton.
+So I think the following rule I'm going to tell you now is going to make sense.
+And it is that Brønstedt acid and Brønstedt base always react in pairs.
+ So here we have a rule.
+Brønstedt acid and Brønstedt base always.
+ So what I do now, it is that I will draw, I think I will draw three different reactions.
+ And in each reaction, I want you to identify the Brønsted acid and the Brønsted base.
+ And this should be NH3, ammonia, nothing else.
+So, if you start looking here at the first reaction, which of the reacting species of water and ammonia is the Brønstedt acid?
+In other words, which of the two substances gives away a proton?
+ Here, this should not be positive, it should be negative because it's in hydroxide ions.
+And I have done no other mistakes on the blackboard.
+So what is happening here?
+It is that water gives away a proton to ammonia.
+So that means that water, it is the Brønstedt acid because it gives away a proton.
+ And this here is the Brønstedt base because it accepts a proton.
+But now I must introduce two new concepts.
+The first concept I have to introduce, it is conjugate base.
+And the other I have to introduce, it is conjugate
+ And what is a conjugate base?
+What is a conjugate base?
+It is the substance formed when a Brønstedt acid gives away a proton.
+So it is substance
+ formed when Brønstedt acid gives away a proton.
+So which is the conjugate base in this reaction?
+ The substance formed when water gives away a proton, it is this hydroxide ion.
+So that becomes the conjugate base.
+And then we have the conjugate acid.
+And conjugate acid, it is the substance formed when a Brønsted base accepts a proton.
+ substance formed when Brønstedt base accept a proton.
+ And here we have the Brønstedt base, and this Brønstedt base, it accepts a proton to become an ammonium ion.
+So that means that this compound, it will become the conjugate acid.
+ And then I ask you to look at reaction number two.
+You don't need to answer loudly, but I just want you to think about it.
+Which is the Brønstedt acid and which is the Brønstedt base in reaction number two?
+Well, here we can see that hydrogen chloride, it gives away a proton to water.
+So it means that in this case,
+ HCl is the Brønstedt acid, and water, which accept a proton, it is the Brønstedt base.
+And which is the conjugate acid, and which is the conjugate base in this reaction?
+So if we look at conjugate base,
+ It is the substance formed when Brønstedt acid gives away a proton.
+So it means that this chloride, it becomes the conjugate base.
+ And then we identify the conjugate acid.
+The conjugate acid, it is the substance formed when a Brønstedt base reacts a proton.
+The Brønstedt base in reaction number two, it is this guy, and when it receives a proton, it becomes the conjugate acid like this.
+And then we have the final example here.
+ Here we have acetic acid giving away a proton to ammonia.
+And because ammonia accepts a proton, it is the Brønstedt base.
+This acetate ion, it is formed when the Brønstedt acid gives away a proton, so it becomes the conjugate base in this reaction.
+And then I did a second mistake here.
+ This should of course be NH4+.
+So it means that NH4+, it is the conjugate acid.
+When you look at this blackboard, especially on water, do you notice something for water in the two first reactions?
+In the first reaction, it behaves as a Brønstedt acid.
+ In the second reaction, it behaves as a Brønstedt base.
+And such compounds, which can behave either as acid or a base, those are called amphoteric substances.
+ So amphoteric substance, it is a substance which can act either as acid or
+ depending on chemical environment.
+And as I said before,
+ Here we have water in a chemical environment together with ammonia.
+And here we have water in a chemical environment together with nitric acid.
+And in the first case here,
+ water, it gives away a proton to ammonia.
+So here it acts as a Brønstedt acid.
+But in the other case,
+ the proton is moving not away from water, but to water from nitric acid.
+So when water is in a chemical environment of a nitric acid, it will behave as a Brønstedt base.
+Like this.
+ And my computer is not working properly today.
+Yes, my eyes are really bad.
+So here, in this problem, we are getting a reaction.
+ So what is happening here, it is that we have phosphoric acid looking like this.
+The phosphoric acid reacts by water, and we get an equilibrium.
+And at equilibrium, we have generated
+ this molecule, and we have also generated this molecule here.
+And let's see what the question asks for.
+Yes, so the mission we have here, it is to identify the Brønstedt acid,
+ Brønstedt base, conjugate acid and conjugate base.
+So if you start having a look at this reaction equation, which substance gives away a proton here?
+You see here,
+ that this product, it only contains two protons and it has a negative charge.
+And to change into this molecule, I think it's quite logical that phosphoric acid gives away a proton to water.
+So it means that phosphoric acid, it is the Brønstedt acid.
+ The water molecule accepts the proton which phosphoric acid gives away.
+So that means that water becomes the Brønstedt base.
+And when the Brønstedt acid gives away a proton,
+ we get this molecule here.
+And I said before that the substance formed when a Brønstedtase gives away a proton, it is called a conjugate base.
+ Here we have the Brønstedt base, which accepts a proton to become a hydronium ion.
+The substance formed when a Brønstedt base accepts a proton, it is the conjugate acid.
+ Okay, I think we take the break a little bit earlier today.
+So let us start again at seven minutes past 11.
+ Yes, I can hear myself talking here that when I'm giving lectures that I'm giving a lot of definitions.
+And I can understand if it's a bit heavy to listen sometimes.
+But when I was a student, it was a long time though, I used to divide the teachers into two groups.
+ those who explained the concept before they went more into the details, and those who went into the details before explaining the meaning of the concepts.
+And I always used to think that those who
+ defined the concept before we went into details i liked those lectures those teachers and those who did not define before we went into the detail tales i liked those less i don't have any education to be a teacher or anything like that so when i'm planning my teaching i'm only using my experience as a student so i don't know what is good or bad teaching i just want to to say like that so if you have feedback at some point about it you can just tell me i'm very open to listen
+ Yes.
+Before the break, I spoke about something.
+I spoke about something which is called amphoteric substance.
+ And when I talked about an amphoteric substance, bad spelling, but it should be amphoteric substance, I said that an amphoteric substance, it is a substance which is able to act both as an acid and a base, depending on the chemical environment.
+And this concept is going to be important when I introduce the next concept, which is the autoprotolysis for water.
+ And I don't know how to explain this by words, but I would like to call it for an acid base reaction in between water molecules.
+And I will explain why in a while.
+So it is an acid base reaction between
+ So, let us assume here that here we have a beaker of pure water.
+And in this pure water, we are going to have an autoprotolysis going on.
+So, if I first draw
+ One water molecule here, a bit to the right because I need some space to the left later, like this.
+And I said before that water, it can both act as a Brønstedt acid and a Brønstedt base.
+So let us now assume that this water molecule, it behaves as a Brønstedt acid.
+This molecule here
+ it behaves as a Brønstedt base.
+So what is going to happen here is that this water molecule gives away a proton to another molecule.
+So what is going to happen now is that this reaction will at some point reach an equilibrium
+ when the rate in the forward direction is equal to the rate in the reverse direction.
+So this here, it means equilibrium.
+And at equilibrium, we have generated the conjugate base of water, and
+ the conjugate acid of water.
+And if we have a temperature of 25 degrees, and when the reaction reaches equilibrium, and if it's pure water.
+We would have a concentration here of hydroxide ions,
+ which is equal to this concentration of hydroxide ions in pure water.
+And we will have an equal concentration of the hydronium ions
+ in pure water.
+So these ions are actually present when we have pure water.
+So it's not only water molecules.
+We have a small, small, small, small fraction of hydroxide ions and hydronium ions.
+And those molecules is formed in a process we call for autoprotolysis.
+ And if you remember from the last chapter, we spoke about equilibrium constants.
+And there is actually also an equilibrium constant for this process which is called autoprotolysis.
+And the equilibrium constant for this reaction is specifically called autoprotolysis constant.
+Autoprotolysis.
+ And the symbol we are using for the outer protolysis constant, it is KW.
+And this is without unit.
+And as I said before, the value of an equilibrium constant, it is always, always the same as the name indicate.
+So this here is,
+ Equilibrium constant for autoprotolysis.
+ And what is the expression for autoprotolysis constant?
+The expression for autoprotolysis constant, it is the following, that the autoprotolysis constant, it is equal to the concentration of hydroxide ions.
+ multiplied by the concentration of hydronium ions.
+And as I said, here at 25 degrees, I have the indicated concentration present of each ion.
+So that means that at 25 degrees, the outer protolysis constant, it is equal to the following number.
+It is equal to the concentration of hydroxide ions
+ multiplied with the concentration of hydronium ions like this.
+And this is equal to 1.00 times 10 raised to the power of minus 14.
+ So this is always the value of the autoprotolysis constant at 25 degrees.
+If you have a higher temperature, we get another value of the autoprotolysis constant.
+But if you have a water solution of 25 degrees, if you multiply the concentration of hydroxide ions and hydronium ions, we will always get this number at 25 degrees.
+So that means the following.
+If we think
+ like this.
+Here we have a water solution.
+And in this water solution, we have of course hydroxide ions and hydronium ions present.
+So if we increase the concentration of hydroxide ions in this solution, what is going to happen to the concentration of hydronium ions in the solution?
+ this product is always the same.
+So if we rise the concentration of hydroxide ions, we must decrease the concentration of hydronium ions.
+And why is it like that?
+As I tried to say, I don't know if everybody really understood what I said, it is because this equilibrium constant, it is always the same.
+It is always equal to this number at,
+ 25 degrees, because the expression of the autoprotolysis constant, it is like this.
+Remember what I said last time, the magnitude of the equilibrium constant is always the same, but the concentration of the species included in the expression of the equilibrium constant, those might be different.
+ And I want you to look at this now when you see this problem here.
+Sometimes I think I should have a basic course about computers.
+ No, I wait.
+I will explain one more thing before we go through this problem.
+And it is the difference in between acidic, basic, and neutral water solutions.
+So we are going to define acidic.
+We are going to define basic.
+And we are going to define neutral.
+ water solutions.
+So here we have three different beakers, like this.
+In beaker number one,
+ we have a hydronium ion concentration, which is larger than the concentration of hydroxide ions.
+In beaker number two, we have the opposite situation, in which the hydroxide ion concentration is larger than the concentration of hydronium ions.
+And in the last beaker,
+ we have equal concentration of hydroxide and hydronium ions.
+So can anybody tell me which is the acidic solution, which is the basic solution, and which is the neutral solution?
+ This relationship here, when you have a higher concentration of hydronium ions, that is the definition of an acidic solution.
+When you have the opposite, that the hydroxide ion concentration is larger, we talk about a basic solution.
+ When we have equal concentrations, we talk about a neutral solution.
+And I know what some of you are thinking now, but below pH seven is the definition of an acidic solution.
+And the answer to that question is yes, if the temperature is 25 degrees.
+So at 25 degrees, acidic solution is below
+ But this definition here, it is valid at all temperature regardless if you have 10 degrees Celsius or 50 degrees Celsius.
+These are the definitions for acidic, basic and neutral solutions.
+And now I will try to use my computer again and see if I'm more successful.
+ So what we have here in this problem, it is an, I am on the right blackboard, here we have a water solution and in this water solution we have hydroxide ions and the concentration of these hydroxide ions, it is
+ 1.0 times 10 raised to the power of, is it minus 10?
+Yes.
+So the first mission we have here, it is to decide the concentration of hydronium ions in this solution.
+And now I will go back to what I said earlier.
+ this product when you multiply the concentration of OH- with hydronium ions.
+The product out of that, it is always equal to this number at 25 degrees.
+So that means
+ that if we multiply this concentration with this concentration, we will get a number which is equal to the auto-protolysis constant.
+So what I do now, it is that I label this equation as equation number two for auto-protolysis constant.
+ And into this equation, I insert the real numbers.
+So we have a concentration of hydroxide ions, which is this large here.
+So this is the hydroxide ion concentration as we already know in this problem.
+ And we multiply this with the concentration of hydronium ions, which we wish to find.
+But we know that when we multiply these concentrations, we get a number which equals the equilibrium constant, which is the autoprotolysis constant.
+ So what is the concentration of hydronium ions in this water solution?
+Well, for this number to be this small, it means that the concentration of the hydronium ions, it must be 1.0 times 10, rise to the power of minus four molar like this.
+And then we have the B problem.
+ And it is to answer the question, is this a basic, acidic, or neutral water solution?
+You have the answer on the blackboards above.
+Because here, we have an hydroxide ion concentration,
+ It is this small.
+And we have a concentration of hydronium ions in the water solution.
+And that is one million times bigger.
+ So that means that the concentration of hydronium ions is larger than the concentration of hydroxide ions.
+And when we have these relationships in between hydronium and hydroxide ions, we have an acidic solution.
+Because we have this relationship is satisfied.
+ and now I turn off the microphone for one minute.
+ Yes, and now I will return to acids and bases.
+And I will divide acids into weak and strong acids.
+And I will divide bases into strong and weak bases.
+So I begin with a strong acid.
+ And the definition of a strong acid, it is an acid which reacts completely with water to generate hydronium ions.
+So I write it here, an acid that reacts completely with
+ to form hydronium ions.
+One example of a strong acid, it is this acid here, it's HCl dissolved in water.
+When we have HCl in water, we have the acid which is called salt syra, or hydrochloric acid.
+ So if we have this guy here dissolved in water, what is going to happen now, as I've shown before, it is that a reaction, it will happen.
+And it is that we will generate this, chloride ions, and we will generate the hydronium ions.
+And then we can assume that,
+ at the time of zero when the reaction starts.
+And we have an equilibrium here when the reactions stop.
+ Here in the beginning, we have one molar of HCl, and we have zero, and we have zero of the product.
+When this reaction reach equilibrium, when we have a strong acid, we have nothing left of the HCl molecules, because all of them has been converted into chloride ions and hydronium ions.
+ So that basically means if you buy a solution of hydrochloric acid from any supplier, you will not get a single molecule of HCl.
+What you're going to get, it is a solution of chloride ions and hydronium ions dissolved in water.
+So you're getting really cheated when you're buying hydrochloric acid because you get not a single HCl molecule.
+ And I want you to remember some strong acids.
+And if you don't remember it, it might get consequences on the exam, I promise you.
+So the acids, I want you to remember as strong.
+It is hydrochloric acid.
+It is hydrobromic acid.
+It is hydroiodic acid.
+It is
+ saltpeter syrup, nitric acid,
+ And I also suggest you to remember svabelsyra, sulfuric acid, as a strong acid.
+So those four you should remember as strong acids.
+And I think that perhaps some of you are thinking, okay, so what?
+It makes sense that this is happening when an acid reacts by water.
+But no, I will show you that that is not always the case when I talk about the weak acids.
+ A weak acid, on the other hand, it only reacts with water to a small extent to form hydronium ions.
+So I write it only reacts with water to a small extent
+ to form hydronium ions.
+And at this point of the course, there is one acid I want you to remember as a weak acid.
+And it is this acid, which I called for acetic acid, or ethyksyra.
+So this is an acid.
+ because it reacts with water.
+And we produce the conjugate base of acetic acid, which is this acetate ion dissolved in water.
+And now we do the same exercise one time more.
+So if you think about here, but here we have the initial state.
+ at a time of zero.
+Here we have an equilibrium.
+And in the initial state we have one molar of acetic acid.
+We have nothing and nothing of these two.
+ And I said that a weak acid such as acetic acid only reacts in a small extent by water to form hydronium ions.
+So when this reaction reaches equilibrium, you have approximately generated one, zero, zero, one molar of the hydronium ion.
+And you have generated an equal amount of
+ the acetate ions.
+But how much do we have left of the acetic acid?
+At equilibrium, we have about this much of the acetic acid left.
+So that means that if you dissolve acetic acid in water,
+ only 1% of the acetic acid molecules are going to react.
+And the remaining acid will be left unchanged.
+So we just have reaction to a small extent for a weak acid.
+And then we also have the strong bases.
+ And when we talk about strong bases, we talk about metal hydroxides, which separate into metal ions and hydroxide ions when they are dissolved in water.
+So I write it here that strong bases are metal hydroxides,
+ that separate into metal and OH minus ions.
+When dissolved,
+ in water.
+So let us take an example of a strong acid, strong base.
+So here we have this compound, which is called potassium hydroxide.
+Potassium hydroxide, it is in the solid state.
+And we decide to dissolve
+ the potassium hydroxide in water.
+When we dissolve this substance, what is going to happen, it is that the potassium ion is going to separate from the hydroxide ion.
+So we get potassium ions and hydroxide ions dissolved in water.
+So let us assume in the initial state,
+ we have one mole of potassium hydroxide.
+I use mole unit because we don't talk about concentrations for a solid.
+And here we have zero and zero.
+ But then in the final state after adding all the potassium hydroxide to the water, you have nothing left of the potassium hydroxide because it has been converted into one mole of potassium ions and one mole of hydroxide ions.
+Potassium hydroxide and other metal hydroxides, they always separate into positive
+ metal ions and hydroxide ions when they are dissolved in water.
+And I have a list here of compounds you must remember as strong bases.
+And that list includes the following, that you have lithium hydroxide, it is a strong base.
+ You have sodium hydroxide, it's a strong base, you must remember.
+You have potassium hydroxide, and you have cesium hydroxide.
+And these here, they are group one metals, which only can form plus one ions.
+And I also want you to remember barium hydroxide as a strong base.
+ And I also ask you to remember calcium hydroxide as a strong base like this.
+So remember those.
+And then we have the weak bases.
+And weak bases,
+ they only react by water to a small extent to generate hydroxide ions.
+So reacts with water in a small extent to form
+ And one typical example of a weak base, it is the following.
+That ammonia, it is a weak base.
+And when you have ammonia in water, it will react with the water to some extent.
+And what is going to happen here, it is that you generate hydroxide ions
+ and you generate ammonium ions.
+And we have an initial state here.
+ And we have an equilibrium when the reaction is complete, because I said on the last lecture, equilibrium, it is the state in which the reaction, it stops.
+So if you assume here in the beginning, we have one molar of ammonia.
+We have nothing, and we have nothing of these two products.
+When...
+ the reaction stops.
+We have approximately this much left of the ammonia.
+And the remaining 0.01 molar has been converted into hydroxide ions and ammonium ions.
+So you have approximately this much.
+Notice here, this double arrow
+ it is used for the reaction of a weak base with water because the reaction is going in both directions.
+And here I also used a double arrow when a weak acid reacts by water because the reaction is going in both directions.
+When you have a strong acid which reacts
+ completely, you use a single arrow because the reaction is only going in that direction.
+It's not going back as we can see here because we have zero molar in the final state.
+Again.
+ Yes, so some more definitions here.
+So what I'm going to define now, it is pH.
+And what is pH?
+It basically means that we express the concentration of hydronium ions on the log scale.
+Because pH is defined as the negative log,
+ of the concentration of hydronium ions in water.
+So we call this equation number three.
+So if you have a water solution here and the concentration of hydronium ions, it's equal to zero
+ It's a bit heavy to say that.
+What is the concentration in this solution?
+Well, it is 0.0.01 molar.
+It is easier to express that as a pH, because if you express the concentration of hydronium ions on a pH scale, what you get instead, according to equation number three, it is the negative log of
+ this number here.
+So instead you can say that this solution, it has a pH of three, instead of saying that the hydronium ion concentration is 0.0.01.
+We also can do the same thing for the concentration of hydroxide ions in a water solution.
+So,
+ the pOH in a water solution.
+It is equal to the negative log of the concentration of hydroxide ions.
+But there is a relationship between pH and pOH, and it is the following.
+ that pH plus pOH, it is equal to 14.00.
+And this expression we can actually derive, I'm not going to do it.
+But this expression, it might be derived from the expression of the autoprotolysis constant, which is this.
+ I'm not going to ask on that on the exam, but you can derive this expression from this expression at 25 degrees.
+So this sum is equal to 14 at 25 degrees because the auto-protolysis is equal to this number at 25 degrees.
+Just remember this formula, you don't need to be able to derive it.
+But now,
+ what I want you to do now.
+It is to look at the definition for pH, and then you go back in your notes to check the definition for a strong acid.
+And then I want you to solve this problem here.
+ So here, we have problem number four.
+And in problem number four, we have a solution of nitric acid.
+The concentration of this solution, it is
+ 0.001 molar.
+And the mission you have here it is to calculate the pH for this solution.
+And how shall we think here?
+Strong acid reacts completely by water.
+ So when this nitric acid is dissolved in water, you will not have a single nitric acid molecule present because all nitric acid has reacted by the water in the solution and formed hydronium ions and water.
+So we can present it like this.
+So we have it, this reaction is happening in the solution.
+ So you have an initial state, and you have a final state which we call equilibrium.
+And in the initial state, we have this concentration of nitric acid.
+ We know that nitric acid, it is a strong acid.
+A strong acid always reacts with the water molecules present in the solution.
+So that means that when this reaction stops, we have nothing left of nitric acid because it has been converted into nitrite ions.
+ and an equal concentration of hydronium ions like this.
+So what we can do now, it is to use expression number three for calculating the pH of this solution.
+So that means the following.
+If you know that the concentration of
+ if you know that you have a solution of nitric acid.
+And if you know that nitric acid is a strong acid, you know that the initial concentration of nitric acid, it is equal to the final concentration of the hydronium ions.
+So that means that the pH of this solution,
+ it will be pH three.
+Strong acid always reacts with water to form hydronium ions.
+That's why the initial concentration is equal to the final concentration of hydronium ions, which gives this relationship that the concentration of strong acid, it is always equal to the concentration of the hydronium ions being formed.
+ So we use the definition of strong acids for solving this problem.
+Perhaps a little bit more challenging problem we have on this slide.
+And I use to ask this type of questions on the exam, because here we have a solution of potassium, sorry, calcium hydroxide,
+ dissolved in water and the concentration here, it is 0.005 molar.
+What type of base is calcium hydroxide?
+Is it a weak or is it a strong base?
+It's a strong base that we must remember for being able for solving this problem.
+We also must know when we solve this problem that
+ pOH plus pH, it is equal to 14 at 25 degrees, as I said earlier, and I gave this equation number five.
+I also said that according to equation number four, we have pOH equal to the negative log
+ of the concentration of hydroxide ions.
+But then we also need to have a look how calcium hydroxide behaves in water when it is dissolved.
+So here we have calcium hydroxide dissolved in water.
+ And when a strong base is dissolved in water, as I said before, it's going to separate into positive ions.
+And be careful now.
+ Here we can see that each calcium hydroxide molecule, it contains two hydroxide ions.
+So that's why we do not write OH-, but we write two OH-, because one calcium hydroxide gives two hydroxide ions, which are dissolved in water.
+And we know that initial concentration
+ is zero, zero, 50 molar.
+We have zero calcium 2+, we have zero of hydroxide ions.
+At some point, or quite fast, we will reach an equilibrium when the concentrations are stabilized.
+ So that means because calcium hydroxide is a strong base, we have nothing left at equilibrium.
+We have generated this much of the calcium 2 plus ions and we have generated
+ this much of the hydroxide ions multiplied by a factor of two because we have the stoichiometric coefficients two in front of the hydroxide ions.
+And that gives us a concentration which is equal to zero, zero, one molar at equilibrium.
+So now we have the data for using expression number four and expression number five.
+ So now, if we find pOH, we can use expression five to find the pH of this solution here.
+So let us start employing expression number four.
+So that means that the pOH, it is equal to the negative log of the concentration of the hydroxide ions.
+So we get, I am on the wrong blackboard.
+ So that means that we get minus log zero, zero, one, which is equal to pOH equals two.
+Now, we know pOH, and we know that this is 14.
+The only thing we need to find now, it is pH.
+So let us do that.
+ So we are using expression five, and we know that pOH, it is equal to two.
+Here we have the pH for this solution which we wish to find.
+And the sum here, it's equal to 14.
+And for this sum to be equal to 14, it means that the pH of this solution, it will be 12.
+ I always ask about something similar on the exam.
+So you can get about 4% quite easily if you try to learn this during the weekend.
+And thank you very much, and I wish you all a nice weekend.
