@@ -21,10 +21,12 @@ from process import (
     load_prompt,
     load_transcription,
     process_transcription,
-    parse_filename,
     save_summary,
     git_publish
 )
+
+# Import utilities
+from utils import parse_filename_details, get_summary_filepath
 
 
 def find_all_transcriptions(transcriptions_dir: Path) -> List[Path]:
@@ -71,13 +73,14 @@ def regenerate_summary(
     dry_run: bool = False
 ) -> Path:
     """Regenerate a single summary."""
-    emnekode, year, month_name, full_date = parse_filename(str(transcript_path))
+    # Get the expected summary filepath using the same logic as process.py
+    summary_file = Path(get_summary_filepath(str(transcript_path)))
 
-    if not all([emnekode, year, month_name, full_date]):
+    # Verify we could parse the filename
+    details = parse_filename_details(str(transcript_path))
+    if not details:
         print(f"⚠️  Could not parse filename: {transcript_path.name}")
         return None
-
-    summary_file = Path(f"forelesninger/{emnekode}/{year}_{month_name}/{emnekode}_{full_date}.md")
 
     if dry_run:
         print(f"  ✅ Would regenerate: {summary_file}")

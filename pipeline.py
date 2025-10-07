@@ -5,36 +5,18 @@ Komplett workflow: Download → Transcribe → Summarize
 """
 
 import argparse
-import subprocess
 import sys
 import os
-import glob
-import re
-from pathlib import Path
+
+# Import run functions from other scripts
+from download import run_download
+from transcribe import run_transcribe
+from process import run_process
+
+# Import utils
 from utils import get_language_for_course, extract_course_code_from_filename
 
-def run_command(cmd, description):
-    """Run a command and handle errors"""
-    print(f"\n{'='*60}")
-    print(f"📌 {description}")
-    print(f"{'='*60}")
-
-    result = subprocess.run(cmd, shell=True)
-
-    if result.returncode != 0:
-        print(f"\n❌ Error in step: {description}")
-        sys.exit(1)
-
-    return result.returncode == 0
-
-def find_latest_file(pattern, directory="downloads"):
-    """Find the most recently created file matching pattern"""
-    files = glob.glob(f"{directory}/{pattern}")
-    if not files:
-        return None
-    return max(files, key=os.path.getctime)
-
-def pipeline(url, language=None, model="anthropic/claude-3.5-sonnet", temperature=0.2):
+def pipeline(url, language, model, temperature, no_publish):
     """
     Run complete pipeline: Download → Transcribe → Summarize
 
@@ -43,6 +25,7 @@ def pipeline(url, language=None, model="anthropic/claude-3.5-sonnet", temperatur
         language: Language code (en/no) or None for auto-detect
         model: OpenRouter model to use
         temperature: Creativity level (0.0-1.0, lower = more focused)
+        no_publish: If True, skips the final Git publish step
     """
 
     print("\n" + "="*60)
@@ -55,20 +38,15 @@ def pipeline(url, language=None, model="anthropic/claude-3.5-sonnet", temperatur
         print(f"Language:    auto-detect from course code")
     print(f"Model:       {model}")
     print(f"Temperature: {temperature}")
+    print(f"Publish:     {not no_publish}")
     print("="*60)
 
     # Step 1: Download and convert to MP3
-    run_command(
-        f'python download.py "{url}"',
-        "STEP 1/3: Downloading lecture from Panopto → MP3"
-    )
-
-    # Find the downloaded MP3 file
-    mp3_file = find_latest_file("*.mp3")
+    print(f"\n{'='*60}\n📌 STEP 1/3: Downloading lecture from Panopto → MP3\n{'='*60}")
+    mp3_file = run_download(url)
     if not mp3_file:
-        print("\n❌ Error: No MP3 file found after download")
+        print("\n❌ Error in step: Download failed")
         sys.exit(1)
-
     print(f"\n✓ Downloaded: {mp3_file}")
 
     # Auto-detect language if not specified
@@ -83,54 +61,29 @@ def pipeline(url, language=None, model="anthropic/claude-3.5-sonnet", temperatur
             print(f"\n⚠️  Could not extract course code, defaulting to '{language}'")
 
     # Step 2: Transcribe with WhisperX
-    run_command(
-        f'python transcribe.py "{mp3_file}" --language {language}',
-        "STEP 2/3: Transcribing with WhisperX"
+    print(f"\n{'='*60}\n📌 STEP 2/3: Transcribing with WhisperX\n{'='*60}")
+    transcript_file = run_transcribe(
+        audio_file=mp3_file,
+        model_size="large-v3", # Or make this a parameter
+        language=language,
+        hf_token=os.environ.get("HF_TOKEN") # Or make this a parameter
     )
-
-    # Find the transcription file
-    base_name = os.path.splitext(os.path.basename(mp3_file))[0]
-    transcript_file = f"transcriptions/{base_name}.txt"
-
-    if not os.path.exists(transcript_file):
-        print(f"\n❌ Error: Transcription file not found: {transcript_file}")
+    if not transcript_file:
+        print("\n❌ Error in step: Transcription failed")
         sys.exit(1)
-
     print(f"\n✓ Transcribed: {transcript_file}")
 
     # Step 3: Generate summary with OpenRouter
-    run_command(
-        f'python process.py "{transcript_file}" --model {model} --temperature {temperature}',
-        "STEP 3/3: Generating AI summary"
+    print(f"\n{'='*60}\n📌 STEP 3/3: Generating AI summary\n{'='*60}")
+    summary_file = run_process(
+        transcription_file=transcript_file,
+        model=model,
+        temperature=temperature,
+        no_publish=no_publish
     )
-
-    # Find the summary file - parse filename to get expected location
-    basename = os.path.basename(transcript_file)
-    match = re.match(r'([A-Z]+\d+)_(\d{4})-(\d{2})-(\d{2})\.txt', basename)
-
-    if match:
-        emnekode = match.group(1)
-        year = match.group(2)
-        month = int(match.group(3))
-        day = match.group(4)
-
-        # Norwegian month names
-        months = {
-            1: "januar", 2: "februar", 3: "mars", 4: "april",
-            5: "mai", 6: "juni", 7: "juli", 8: "august",
-            9: "september", 10: "oktober", 11: "november", 12: "desember"
-        }
-        month_name = months.get(month, "ukjent")
-
-        summary_file = f"forelesninger/{emnekode}/{year}_{month_name}/{emnekode}_{year}-{match.group(3)}-{day}.md"
-    else:
-        # Fallback
-        summary_file = transcript_file.replace(".txt", ".md")
-
-    if not os.path.exists(summary_file):
-        print(f"\n❌ Error: Summary file not found: {summary_file}")
+    if not summary_file:
+        print("\n❌ Error in step: Summary generation failed")
         sys.exit(1)
-
     print(f"\n✓ Summary: {summary_file}")
 
     # Final summary
@@ -149,46 +102,42 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # English lecture (default)
+  # Auto-detect language, publish to Git
   python pipeline.py "https://uis.cloud.panopto.eu/..."
 
-  # Norwegian lecture
-  python pipeline.py "https://uis.cloud.panopto.eu/..." --language no
+  # Force Norwegian, skip publishing
+  python pipeline.py "https://uis.cloud.panopto.eu/..." --language no --no-publish
 
-  # Use different model
+  # Use a different model
   python pipeline.py "https://url" --model openai/gpt-4o
 
-  # Adjust creativity
-  python pipeline.py "https://url" --temperature 0.5
-
-Default model: Claude 3.5 Sonnet (best for academic summaries)
-Default temperature: 0.2 (focused and precise)
+Default model: Claude 3.5 Sonnet
+Default temperature: 0.2
         """
     )
 
-    parser.add_argument(
-        "url",
-        help="Panopto lecture URL"
-    )
-
+    parser.add_argument("url", help="Panopto lecture URL")
     parser.add_argument(
         "--language",
         default=None,
         choices=["en", "no", "sv", "da", "de", "fr", "es"],
         help="Lecture language (default: auto-detect from course code)"
     )
-
     parser.add_argument(
         "--model",
         default="anthropic/claude-3.5-sonnet",
         help="OpenRouter model (default: anthropic/claude-3.5-sonnet)"
     )
-
     parser.add_argument(
         "--temperature",
         type=float,
         default=0.2,
         help="Sampling temperature 0.0-1.0 (default: 0.2 for focused output)"
+    )
+    parser.add_argument(
+        "--no-publish",
+        action="store_true",
+        help="Skip the final Git publish step"
     )
 
     args = parser.parse_args()
@@ -212,7 +161,8 @@ Default temperature: 0.2 (focused and precise)
         args.url,
         language=args.language,
         model=args.model,
-        temperature=args.temperature
+        temperature=args.temperature,
+        no_publish=args.no_publish
     )
 
 if __name__ == "__main__":

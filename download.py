@@ -133,19 +133,17 @@ def rename_file(filename, download_path="downloads"):
         print(f"Error: File to rename not found at '{old_filepath}'")
         return None
 
-
-def main():
-    parser = argparse.ArgumentParser(description="Download a video from a given URL to the 'downloads' folder.")
-    parser.add_argument("url", nargs="?", help="The URL of the video to download.")
-    args = parser.parse_args()
-
+def run_download(url: str) -> str | None:
+    """Runs the download and conversion process for a given URL.
+    
+    Args:
+        url: The Panopto URL to download.
+        
+    Returns:
+        The path to the final .mp3 file, or None if failed.
+    """
     download_dir = "downloads"
     os.makedirs(download_dir, exist_ok=True)
-
-    if args.url:
-        url = args.url
-    else:
-        url = input("Enter the URL of the video to download: ")
 
     # Check if file already exists
     print("Checking if file already exists...")
@@ -158,48 +156,61 @@ def main():
         if os.path.exists(mp3_path):
             print(f"✓ File already exists: {expected_mp3}")
             print(f"  Skipping download.")
-            return
+            return mp3_path
         else:
             print(f"  File not found, will download: {expected_mp3}")
 
     video_id = get_video_id(url)
 
-    if video_id:
-        print(f"Found video with ID: {video_id}")
-        download_video(url, video_id)
-        
-        # Find the most recently modified .mp4 file in the downloads directory.
-        files = [os.path.join(download_dir, f) for f in os.listdir(download_dir) if f.endswith('.mp4')]
-        if not files:
-            print("Error: No .mp4 file found in downloads directory after download.")
-            return
-            
-        latest_file = max(files, key=os.path.getctime)
-        original_filename = os.path.basename(latest_file)
-
-        print(f"Downloaded file identified as: {original_filename}")
-
-        # Rename video file
-        if not re.match(r"^\w+_\d{4}-\d{2}-\d{2}\.mp4$", original_filename):
-            new_filename = rename_file(original_filename, download_path=download_dir)
-            if not new_filename:
-                print("Could not rename the video file.")
-                return
-        else:
-            new_filename = original_filename
-            print("File already correctly named.")
-
-        # Convert to MP3 audio to save space
-        video_path = os.path.join(download_dir, new_filename)
-        audio_path = convert_to_audio(video_path)
-
-        if audio_path:
-            print(f"\n✓ Download complete: {os.path.basename(audio_path)}")
-        else:
-            print(f"\n✓ Download complete (video retained): {new_filename}")
-
-    else:
+    if not video_id:
         print("Could not find a suitable video format.")
+        return None
+
+    print(f"Found video with ID: {video_id}")
+    download_video(url, video_id)
+    
+    # Find the most recently modified .mp4 file in the downloads directory.
+    files = [os.path.join(download_dir, f) for f in os.listdir(download_dir) if f.endswith('.mp4')]
+    if not files:
+        print("Error: No .mp4 file found in downloads directory after download.")
+        return None
+        
+    latest_file = max(files, key=os.path.getctime)
+    original_filename = os.path.basename(latest_file)
+
+    print(f"Downloaded file identified as: {original_filename}")
+
+    # Rename video file
+    if not re.match(r"^\w+_\d{4}-\d{2}-\d{2}\.mp4$", original_filename):
+        new_filename = rename_file(original_filename, download_path=download_dir)
+        if not new_filename:
+            print("Could not rename the video file.")
+            return None
+    else:
+        new_filename = original_filename
+        print("File already correctly named.")
+
+    # Convert to MP3 audio to save space
+    video_path = os.path.join(download_dir, new_filename)
+    audio_path = convert_to_audio(video_path)
+
+    if audio_path:
+        print(f"\n✓ Download complete: {os.path.basename(audio_path)}")
+        return audio_path
+    else:
+        print(f"\n✓ Download complete (video retained): {new_filename}")
+        return None
+
+def main():
+    parser = argparse.ArgumentParser(description="Download a video from a given URL to the 'downloads' folder.")
+    parser.add_argument("url", nargs="?", help="The URL of the video to download.")
+    args = parser.parse_args()
+
+    url = args.url
+    if not url:
+        url = input("Enter the URL of the video to download: ")
+
+    run_download(url)
 
 if __name__ == "__main__":
     main()

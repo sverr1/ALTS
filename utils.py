@@ -2,6 +2,8 @@
 ALTS Utility Functions
 Shared helper functions for language detection and course code parsing
 """
+import os
+import re
 
 def get_language_for_course(course_code: str) -> str:
     """
@@ -45,8 +47,6 @@ def extract_course_code_from_filename(filename: str) -> str:
     Returns:
         Course code (e.g., "FYS102", "DAT120")
     """
-    import re
-
     # Try pattern: EMNEKODE_YYYY-MM-DD
     match = re.match(r'^([A-Z]+\d+)_\d{4}-\d{2}-\d{2}', filename)
     if match:
@@ -58,3 +58,68 @@ def extract_course_code_from_filename(filename: str) -> str:
         return match.group(1)
 
     return ""
+
+def get_month_name(month_num: int) -> str:
+    """Convert month number to Norwegian month name"""
+    months = {
+        1: "januar", 2: "februar", 3: "mars", 4: "april",
+        5: "mai", 6: "juni", 7: "juli", 8: "august",
+        9: "september", 10: "oktober", 11: "november", 12: "desember"
+    }
+    return months.get(month_num, "ukjent")
+
+def parse_filename_details(file_path: str) -> dict | None:
+    """
+    Parse a filename to extract course code, date, and other details.
+
+    Expected format: EMNEKODE_YYYY-MM-DD.<ext>
+    Example: FYS102_2025-10-03.txt
+
+    Returns:
+        A dictionary with details or None if parsing fails.
+    """
+    basename = os.path.basename(file_path)
+    
+    # Regex to capture course code and date, ignoring extension
+    match = re.match(r'^([A-Z]+\d+)_(\d{4})-(\d{2})-(\d{2})', basename)
+    
+    if not match:
+        return None
+
+    emnekode, year_str, month_str, day_str = match.groups()
+    
+    return {
+        "course_code": emnekode,
+        "year": int(year_str),
+        "month": int(month_str),
+        "day": int(day_str),
+        "full_date": f"{year_str}-{month_str}-{day_str}",
+        "month_name": get_month_name(int(month_str))
+    }
+
+def get_summary_filepath(transcription_filepath: str) -> str:
+    """
+    Construct the structured file path for a summary markdown file.
+
+    Args:
+        transcription_filepath: The path to the source transcription file.
+
+    Returns:
+        The target path for the summary .md file.
+    """
+    details = parse_filename_details(transcription_filepath)
+
+    if not details:
+        # Fallback to simple replacement if parsing fails
+        return transcription_filepath.replace(".txt", ".md")
+
+    folder_path = (
+        f"forelesninger/{details['course_code']}/"
+        f"{details['year']}_{details['month_name']}"
+    )
+
+    # Format: EMNEKODE_DD.MM.YY.md (e.g., KJE101_26.09.25.md)
+    date_str = f"{details['day']:02d}.{details['month']:02d}.{details['year'] % 100:02d}"
+    summary_filename = f"{details['course_code']}_{date_str}.md"
+
+    return os.path.join(folder_path, summary_filename)

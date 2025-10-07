@@ -2,6 +2,7 @@ import whisperx
 import gc
 import sys
 import os
+import argparse
 from utils import get_language_for_course, extract_course_code_from_filename
 
 def transcribe_with_whisperx(audio_file, model_size="large-v3", batch_size=16, compute_type="float16", hf_token=None, language=None):
@@ -97,48 +98,24 @@ def transcribe_with_whisperx(audio_file, model_size="large-v3", batch_size=16, c
 
     print(f"\n\nTranscription saved to '{output_filename}'")
     print("--- WhisperX Transcription complete ---")
+    return output_filename
 
+def run_transcribe(audio_file: str, model_size: str, language: str | None, hf_token: str | None) -> str | None:
+    """Runs the transcription process for a given audio file.
 
-if __name__ == "__main__":
-    # Parse arguments
-    if len(sys.argv) < 2:
-        print("Usage: python transcribe.py <audio_file> [model_size] [--language LANG] [--hf-token TOKEN]")
-        print("Example: python transcribe.py audio.mp4 large-v3 --language en")
-        print("Languages: en (English), no (Norwegian), sv (Swedish), etc.")
-        sys.exit(1)
+    Args:
+        audio_file: Path to the audio file.
+        model_size: Whisper model size.
+        language: Language code, or None for auto-detect.
+        hf_token: HuggingFace token, or None.
 
-    audio_file = sys.argv[1]
-    model_size = sys.argv[2] if len(sys.argv) > 2 and not sys.argv[2].startswith("--") else "large-v3"
-
-    # Check for language override
-    language = None
-    if "--language" in sys.argv:
-        idx = sys.argv.index("--language")
-        if idx + 1 < len(sys.argv):
-            language = sys.argv[idx + 1]
-    else:
-        # Auto-detect language from course code in filename
-        filename = os.path.basename(audio_file)
-        course_code = extract_course_code_from_filename(filename)
-        if course_code:
-            language = get_language_for_course(course_code)
-            print(f"Auto-detected language '{language}' for course {course_code}")
-        else:
-            print("Could not extract course code, using auto-detect")
-
-    # Check for HuggingFace token
-    hf_token = None
-    if "--hf-token" in sys.argv:
-        idx = sys.argv.index("--hf-token")
-        if idx + 1 < len(sys.argv):
-            hf_token = sys.argv[idx + 1]
-    elif "HF_TOKEN" in os.environ:
-        hf_token = os.environ["HF_TOKEN"]
-
-    # Check if file exists
+    Returns:
+        The path to the transcription file, or None if failed or skipped.
+    """
+    # Check if input file exists
     if not os.path.exists(audio_file):
         print(f"Error: File not found at '{audio_file}'")
-        sys.exit(1)
+        return None
 
     # Check if transcription already exists
     base_name = os.path.splitext(os.path.basename(audio_file))[0]
@@ -146,8 +123,55 @@ if __name__ == "__main__":
     if os.path.exists(output_filename):
         print(f"✓ Transcription already exists: {output_filename}")
         print(f"  Skipping transcription.")
-        sys.exit(0)
+        return output_filename
     else:
         print(f"  Transcription not found, will create: {output_filename}")
 
-    transcribe_with_whisperx(audio_file, model_size=model_size, hf_token=hf_token, language=language)
+    return transcribe_with_whisperx(
+        audio_file,
+        model_size=model_size,
+        hf_token=hf_token,
+        language=language
+    )
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Transcribe an audio file using WhisperX.",
+        formatter_class=argparse.RawTextHelpFormatter,
+        epilog="""
+Examples:
+  python transcribe.py downloads/KJE101_2025-10-03.mp3
+  python transcribe.py downloads/FYS102_2025-09-12.mp3 --language en
+  python transcribe.py audio.mp4 --model-size medium.en
+"""
+    )
+    parser.add_argument("audio_file", help="Path to the audio or video file to transcribe.")
+    parser.add_argument("--model-size", default="large-v3", help="Whisper model size (default: large-v3)")
+    parser.add_argument("--language", default=None, help="Language code (e.g., 'en', 'no'). Auto-detects if not specified.")
+    parser.add_argument("--hf-token", default=None, help="HuggingFace token for speaker diarization.")
+
+    args = parser.parse_args()
+
+    # Determine language
+    language = args.language
+    if not language:
+        filename = os.path.basename(args.audio_file)
+        course_code = extract_course_code_from_filename(filename)
+        if course_code:
+            language = get_language_for_course(course_code)
+            print(f"Auto-detected language '{language}' for course {course_code}")
+        else:
+            print("Could not extract course code, using Whisper's auto-detection")
+
+    # Determine HuggingFace token
+    hf_token = args.hf_token or os.environ.get("HF_TOKEN")
+
+    run_transcribe(
+        audio_file=args.audio_file,
+        model_size=args.model_size,
+        language=language,
+        hf_token=hf_token
+    )
+
+if __name__ == "__main__":
+    main()

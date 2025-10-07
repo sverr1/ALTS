@@ -1,12 +1,11 @@
 import os
 import sys
 import argparse
-import re
 import subprocess
 from pathlib import Path
-from datetime import datetime
 from openai import OpenAI
 from dotenv import load_dotenv
+from utils import get_summary_filepath, parse_filename_details
 
 # Chunking configuration for large transcriptions
 # 3-hour lecture ~36k tokens. 150k chars ~ 37.5k tokens.
@@ -137,72 +136,18 @@ def process_transcription(transcription_text, system_prompt, model="anthropic/cl
         print(f"Error during final synthesis: {e}")
         sys.exit(1)
 
-def get_month_name(month_num):
-    """Convert month number to Norwegian month name"""
-    months = {
-        1: "januar", 2: "februar", 3: "mars", 4: "april",
-        5: "mai", 6: "juni", 7: "juli", 8: "august",
-        9: "september", 10: "oktober", 11: "november", 12: "desember"
-    }
-    return months.get(month_num, "ukjent")
-
-def parse_filename(transcription_file):
-    """
-    Parse transcription filename to extract course code and date.
-
-    Expected format: EMNEKODE_YYYY-MM-DD.txt
-    Example: FYS102_2025-10-03.txt, DAT120_2025-10-06.txt
-
-    Returns: (emnekode, year, month_name, full_date)
-    """
-    basename = os.path.basename(transcription_file)
-
-    # Match pattern: EMNEKODE_YYYY-MM-DD.txt (strict format)
-    match = re.match(r'^([A-Z]+\d+)_(\d{4})-(\d{2})-(\d{2})\.txt$', basename)
-
-    # Try without .txt extension as fallback
-    if not match:
-        match = re.match(r'^([A-Z]+\d+)_(\d{4})-(\d{2})-(\d{2})$', basename)
-
-    if not match:
-        print(f"⚠️  Could not parse filename: '{basename}'")
-        print(f"   Expected format: EMNEKODE_YYYY-MM-DD.txt")
-        print(f"   Example: FYS102_2025-10-03.txt or DAT120_2025-10-06.txt")
-        print(f"   Note: Lecture numbers (e.g., -1, -2) should be removed by download.py")
-        return None, None, None, None
-
-    emnekode = match.group(1)
-    year = match.group(2)
-    month = int(match.group(3))
-    day = match.group(4)
-
-    month_name = get_month_name(month)
-    full_date = f"{year}-{match.group(3)}-{day}"
-
-    return emnekode, year, month_name, full_date
-
 def save_summary(summary_text, transcription_file):
     """
     Save processed summary to file in structured folder.
 
     Creates structure: forelesninger/EMNEKODE/YYYY_måned/EMNEKODE_YYYY-MM-DD.md
     """
-    # Parse filename
-    emnekode, year, month_name, full_date = parse_filename(transcription_file)
-
-    if not all([emnekode, year, month_name, full_date]):
-        # Fallback to old behavior if parsing fails
-        print("Using fallback naming (could not parse filename)")
-        if transcription_file.endswith(".txt"):
-            summary_file = transcription_file.replace(".txt", ".md")
-        else:
-            summary_file = transcription_file + ".md"
-    else:
-        # Create structured path
-        folder_path = f"forelesninger/{emnekode}/{year}_{month_name}"
-        os.makedirs(folder_path, exist_ok=True)
-
-        summary_file = f"{folder_path}/{emnekode}_{full_date}.md"
+    summary_file = get_summary_filepath(transcription_file)
+    
+    # Create directory if it doesn't exist
+    summary_dir = os.path.dirname(summary_file)
+    if not os.path.exists(summary_dir):
+        os.makedirs(summary_dir)
 
     with open(summary_file, 'w', encoding='utf-8') as f:
         f.write(summary_text)
@@ -275,6 +220,53 @@ def git_publish(summary_file, emnekode, date_str):
         print("✓ Pushed to remote repository")
         print(f"\n🎉 Summary published successfully!")
 
+def run_process(transcription_file: str, model: str, temperature: float, no_publish: bool) -> str | None:
+    """Runs the processing logic for a given transcription file.
+
+    Args:
+        transcription_file: Path to the transcription file.
+        model: The AI model to use.
+        temperature: The creativity temperature.
+        no_publish: If True, skips the Git publish step.
+
+    Returns:
+        The path to the summary file, or None if failed or skipped.
+    """
+    summary_file = get_summary_filepath(transcription_file)
+
+    if os.path.exists(summary_file):
+        print(f"✓ Summary already exists: {summary_file}")
+        print(f"  Skipping processing.")
+        return summary_file
+    else:
+        print(f"  Summary not found, will create: {summary_file}")
+
+    system_prompt = load_prompt()
+    transcription = load_transcription(transcription_file)
+
+    summary = process_transcription(
+        transcription,
+        system_prompt,
+        model=model,
+        temperature=temperature
+    )
+
+    summary_file = save_summary(summary, transcription_file)
+
+    print(f"\n✓ Processing complete!")
+    print(f"  Input:  {transcription_file}")
+    print(f"  Output: {summary_file}")
+
+    if not no_publish:
+        details = parse_filename_details(transcription_file)
+        if details:
+            git_publish(summary_file, details['course_code'], details['full_date'])
+        else:
+            print("\n⚠️  Could not extract course code/date for Git commit")
+            print("   Skipping Git publish. Use --no-publish to suppress this warning.")
+    
+    return summary_file
+
 def main():
     parser = argparse.ArgumentParser(
         description="Process lecture transcription with OpenRouter LLM"
@@ -302,57 +294,12 @@ def main():
 
     args = parser.parse_args()
 
-    # Check if summary already exists
-    transcription_file = args.transcription_file
-    emnekode, year, month_name, full_date = parse_filename(transcription_file)
-
-    if all([emnekode, year, month_name, full_date]):
-        summary_file = f"forelesninger/{emnekode}/{year}_{month_name}/{emnekode}_{full_date}.md"
-    else:
-        # Fallback
-        if transcription_file.endswith(".txt"):
-            summary_file = transcription_file.replace(".txt", ".md")
-        else:
-            summary_file = transcription_file + ".md"
-
-    if os.path.exists(summary_file):
-        print(f"✓ Summary already exists: {summary_file}")
-        print(f"  Skipping processing.")
-        sys.exit(0)
-    else:
-        print(f"  Summary not found, will create: {summary_file}")
-
-    # Load system prompt
-    print("Loading prompt template...")
-    system_prompt = load_prompt()
-
-    # Load transcription
-    print(f"Loading transcription: {args.transcription_file}")
-    transcription = load_transcription(args.transcription_file)
-
-    # Process with OpenRouter
-    summary = process_transcription(
-        transcription,
-        system_prompt,
+    run_process(
+        transcription_file=args.transcription_file,
         model=args.model,
-        temperature=args.temperature
+        temperature=args.temperature,
+        no_publish=args.no_publish
     )
-
-    # Save result
-    summary_file = save_summary(summary, args.transcription_file)
-
-    print(f"\n✓ Processing complete!")
-    print(f"  Input:  {args.transcription_file}")
-    print(f"  Output: {summary_file}")
-
-    # Git publish (unless disabled)
-    if not args.no_publish:
-        # Extract emnekode and date for commit message
-        if emnekode and full_date:
-            git_publish(summary_file, emnekode, full_date)
-        else:
-            print("\n⚠️  Could not extract course code/date for Git commit")
-            print("   Skipping Git publish. Use --no-publish to suppress this warning.")
 
 if __name__ == "__main__":
     main()

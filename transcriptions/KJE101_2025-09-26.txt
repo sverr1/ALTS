@@ -1,0 +1,568 @@
+ Is the intensity of the light good enough?
+Should I increase or decrease the intensity of the light?
+Increase.
+So please stop me when it's good enough.
+Like this.
+And what about the sound?
+Can you hear me?
+Not too much.
+ Excellent.
+So I see that the number of students is declining for each lecture.
+For me, it's totally fine as long as everybody passed the exam.
+And I guess I have much competition for artificial intelligence, so perhaps it makes sense.
+Yes, so let's start.
+ One thing we spoke about last time, which is going to be important to understand today's lecture, it is the collision theory.
+And what did the collision theory tell us?
+ it said something about reactions for occurring.
+So, for example, if you have a reaction in between hydrogen gas and iodine to produce hydrogen iodide, one thing needs to happen here for this reaction to occur.
+ What needs to happen here, according to the collision theory, it is the following.
+That the iodine, it has to collide with the hydrogen gas.
+And if we don't have this type of collision, we will not have any reaction taking place.
+So this is going to be fundamental today, that the collision theory...
+ says that molecules need to collide in order to react.
+And I think it makes sense for most people, but it's just good to have it fresh in your head when we talk today.
+And the first thing I'm going to talk about today, it is the final destination of a reaction.
+It is the purpose for a reaction to occur.
+And the purpose for a reaction to occur, it is to reach chemical equilibrium.
+ And when we have chemical equilibrium, it means that the reaction, it occurs by equal velocities in both directions.
+That's the first thing to remember, that reaction occurs by the same
+ rate in both directions.
+So just to make this very, very, very clear right now.
+So let us assume that we have the following reaction, that we have di-nitrogen tetraoxide.
+ This molecule, it can decompose to two nitrogen dioxide molecules.
+And when this reaction has reached equilibrium, we have one velocity in the forward direction, and we have one velocity in the reverse direction.
+And when
+ The both velocities are equal.
+This means that the reaction has reached equilibrium.
+So, for example, if you have this scenario here, that the forward reaction, it is larger than the reverse reaction.
+It means that the reaction is not at equilibrium.
+So this means not equilibrium.
+ And the purpose for a reaction to happen, it is to reach this chemical equilibrium.
+So you can actually say that the final destination for chemical reaction, it is chemical equilibrium.
+So we write it that reaction stops at equilibrium.
+ So the concentrations of the substrate and the product, those concentrations are going to keep changing until the reaction reaches chemical equilibrium.
+And when equilibrium is reached, the concentration of the reactant and the product, those will stop changing.
+I will return to this in a while, but I'm not there yet.
+But what I would like to just mention something about
+ It is the path to equilibrium.
+ And just to make it clear from the beginning that my explanation here is just an approximate explanation.
+I just want to explain a bit how the reaction reaches equilibrium.
+So what I'm doing now, it is that I use this reaction here as an example that we have hydrogen reacting with iodine to generate
+ two hydrogen iodide molecules.
+And I would like to explain approximately how this reaction is reaching equilibrium.
+So the first thing I'm doing here, it is that I have a line here.
+And this line, it signifies time.
+And here I have an initial time of zero.
+And here we have a reaction vessel like this.
+ In this reaction vessel, we place the following substances.
+We place dihydrogen.
+We place eight molecules of dihydrogen inside this reaction vessel.
+ I see it's getting smaller and it's getting smaller and smaller when I'm writing, so I hope you can see it.
+And then I'm counting, one, two, three, four, five, six, seven, eight.
+And then I put an equal number of diiodide.
+So we have
+ like this.
+And what needs to happen for hydrogen to react with iodine in this reaction according to the collision theory?
+They need to collide with each other because if you have no collisions, we will have no reaction.
+So what is going to happen here?
+It is that the reacting molecules, those are colliding with each other like this.
+Some collisions,
+ gives reactions and some collisions does not give reaction because they must have enough energy for the reaction to happen.
+And then we have a look at then later time, let's say like 10 hours, 10 days, whatever.
+It's not so important in this case.
+And we still have the reaction vessel here.
+ And when we analyze the composition of the reaction, we have the following, that we have generated four hydrogen iodide molecules.
+And what is left of the hydrogen, we have four hydrogen gas molecules left.
+We have the same number of diiodine left, like this.
+ And now we look here.
+Here we have 1, 2, 3, 4, 5, 6, 7, 8 collisions pushing the reaction in the forward directions.
+So I write 8 collisions in the forward direction.
+But...
+ in the same way as the reacting molecules can collide and react with each other.
+We can have the same scenario with the product.
+The product, it can react back to the reactant.
+And that happens when the product molecules are colliding with each other like this.
+But if we assume that the possibility for reaction
+ to be the same for this type of collisions and this type of collisions.
+The rates, they will not be the same.
+Because here we have eight collisions pushing the reaction in the forward direction.
+Here we have only one, two collisions pushing the reaction in the reverse direction.
+So that means that we have two
+ velocities here, we have one velocity for the forward direction, and we have one for the reverse direction.
+But those are not equal with each other, which means that we have not equilibrium.
+Like this.
+And then we,
+ wait for a bit longer time, let's say after 20 days.
+And after 20 days, we have the following scenario, that in the reaction vessel at this time, we have as much as something's wrong here, one, two, three, four, five, six,
+ I just would like to make a small change here now.
+What I'm doing now, it is that I remove these two down here.
+ So we have one, two, three, four, five, six hydrogen.
+And we have one, two, three, four, five, six diiodine.
+And that gives six collisions.
+And here we have the following.
+I will remove.
+So now everything is fine.
+So now we have six collisions pushing the reaction forward.
+And we have two collisions pushing the reaction backwards.
+ Like this.
+So that is the status now.
+But then we have a look a bit later.
+And at a later time, we have generated two hydrogen iodide molecules more, like this.
+And we have hydrogen gas, hydrogen gas, and hydrogen gas.
+ Diiodine and diiodine.
+And if we look here now, how many collisions do we have pushing the reaction in the forward direction?
+We have one, two, three, four collisions.
+So we have four collisions pushing in the forward direction.
+ but we also have collisions pushing the reaction in the reverse direction like this.
+And how many are those?
+Those are as many as one, two, and three.
+So that means that we have four collisions for the forward direction, and we have three collisions in the reverse direction.
+ So it means that we have one forward velocity because of this, because of this one, two, three, four collisions.
+And we have one reverse reaction because of this one, two, three collisions here.
+So that means that the forward reaction is larger than the reverse reaction.
+So it means that we have not equilibrium.
+ And then we started the composition of the reaction mixture after, let's say, 30 hours, like this.
+And at this point, we don't have any change in the composition because here we still have six of these hydrogen iodide molecules.
+And we have
+ three remaining hydrogen gas molecules, and we have three remaining diiodine.
+And now we count the collisions for each direction.
+So now we have, what do we have?
+We have three collisions pushing the reaction in the forward direction.
+So we have three collisions in the forward direction.
+ And what about here?
+How many collisions do we have pushing the reaction in the reverse direction?
+We have one, two, and three.
+So we have three collisions.
+ And what does this mean according to my way of thinking?
+According to my way of thinking, if you have three collisions pushing the reaction in the forward direction, and three collisions pushing the reaction in the reverse direction, that means that the velocity in the forward direction is equal to the velocity in the reverse direction.
+So we have this scenario here, that both velocities are equal.
+ So it means that we have reached equilibrium, which means that the composition, it stops changing in the reaction vessel.
+We will not get any changes in the concentrations.
+ And when we talk about equilibrium, we talk about something which is also very important both in this chapter and in the following chapter when we speak about acids and bases.
+And it is what we call equilibrium constant.
+ The symbol of the equilibrium constant, it is Kc, and we have no unit for the equilibrium constant.
+But what is the equilibrium constant?
+Shortly, the equilibrium constant, it is the ratio in concentration between the products and reactants at equilibrium.
+ So I write it here that equilibrium constant refers to ratio in between product concentration
+ and reactant concentration at equilibrium.
+ So just let us look at a hypothetical reaction now.
+So in my hypothetical reaction, we have gas A, and this gas A, it reacts with another gas of B. And at some point, we will get an equilibrium, which means that the forward velocity is equal to the reverse velocity.
+ And what has been generated here, it is another gas, it's gas C. And the second gas,
+ but we also have stoichiometric coefficients in this reaction equation.
+So the stoichiometric coefficient for the first gas, it is a small a, and for the second gas, it is a small b, and then in the same way for the products.
+So just make this very clear about a, b, c, and d.
+ D, those are stoichiometric coefficient.
+Okay, so how does the expression for the equilibrium constant look like for this reaction?
+The expression of the equilibrium constant, it looks in the following way.
+ But here in the numerator, we place the concentration of product C at equilibrium, raised to its stoichiometric coefficient.
+And this concentration we multiply with the concentration of the other product, D,
+ its molar concentration raised to its stoichiometric coefficient.
+And then this product we divide by the concentration of the reactants.
+So here we have the concentration of reactant A, raised to its stoichiometric coefficient.
+And here we have the concentration of the other reactant at equilibrium.
+Important now.
+ Kc, the equilibrium constant, it has no unit.
+So when you calculate the equilibrium constant, you use the magnitude of the concentration of each species, but you do not insert the unit molar concentration.
+So for example, if you have a concentration here of one molar of substance A at equilibrium, you just write,
+ one here inside this expression, you don't care about including the unit, you just use the magnitude of the concentration.
+So that is the expression of the equilibrium constant.
+Another thing, I'll never forget this, the equilibrium constant, it is always the same for a certain reaction.
+I will come back to this in a while.
+ So I write it here just to warm you up, but KC is always the same for a certain reaction.
+ And what I would like you to do now, it is to have a look on this slide.
+So let me see if I use the right camera.
+Yes.
+So what we have here in this problem, it is the following, that we have a reaction between nitrogen gas and hydrogen gas.
+ And at some point, we will get an equilibrium in this reaction.
+And what does equilibrium means?
+It means that the rate of the forward reaction, it is equal to the rate of the reverse reaction.
+So it means we have one forward velocity, we have one reverse velocity,
+ which gives that these velocities, those are equal.
+And the mission we have here, it is to decide this equilibrium constant for the reaction.
+And we are provided with the molar concentrations at equilibrium.
+So for the first guy in this reaction at equilibrium, we have a concentration
+ of zero, 40 molar, of the energy carrier, hydrogen gas, we have a concentration of zero, 44 molar, and of the product ammonia, we have a concentration of 2.2 molar.
+So how shall we calculate the equilibrium constant?
+ A good start, at least from my standpoint, is to have a look at this general formula for calculating the equilibrium constant.
+ And if you apply this formula for this reaction here, how does it look like?
+So if you start looking here, here we have ammonia.
+So in the numerator, we place the molar concentration of ammonia at equilibrium.
+We have a stoichiometric coefficient of two for ammonia.
+So the concentration of ammonia, it's raised to the power of two.
+ Ammonia is the only product we have in this reaction, so now we are finished with the numerator.
+So let's continue now with the denumerator for this equilibrium constant.
+Here we have nitrogen gas, which is a reactant.
+So we include the concentration of nitrogen gas.
+ The stoichiometric coefficient here, it is one, but we never write one as a stoichiometric coefficient.
+So we're done with the concentration of the nitrogen gas.
+Now we change the focus into the hydrogen gas.
+And we must include the concentration of the hydrogen gas.
+ But we notice that we have the stoichiometric coefficient of 3 in front of hydrogen gas, which means that the concentration of hydrogen gas, it must be raised to the power of 3, because 3 is the stoichiometric coefficient for hydrogen gas in this reaction.
+So let me just...
+ for all simplicity label this as equation number one.
+So now we have an expression for the equilibrium constant for this reaction.
+So what we can do now, it is that we can insert the real numbers into the expression of the equilibrium constant.
+So let us do that.
+And what did I say about the units of molar concentrations?
+ do not include the units in the expression for the equilibrium constant.
+So we write 2.2 rise to the power of two.
+And then we divide this number by the concentration of nitrogen gas.
+So we have 0.40.
+And then we multiply, this is multiply, with the concentration of hydrogen gas.
+ which is zero, 44 rise to the stoichiometric coefficient of three.
+And if I have done the mathematics correctly, I get a value of the equilibrium constant equal to 163.
+Give me one second to check so I'm not lying for you.
+Yes, I'm lying for you because the
+ number here it is 142 so this is the equilibrium constant for this reaction here.
+I said never forget this and I said I will return to this and I will do it but I will take one minute break before I do it so I will just erase from the blackboard and I turn off the microphone.
+ Okay.
+What I'm going to tell you now, it's going to be very important.
+And it might have a big impact in your final grade in this course that you understand what I'm telling you now.
+And I'm not promise it will have a big impact, but there is a big chance at least.
+ And it is the following.
+So I write important, and it's important that the people at home see what I'm going to tell you right now.
+Probably you already know it, but you must have it in the top of your head when you go for the exam.
+And it is the following.
+ that the equilibrium constant, it is always the same for a reaction.
+But the molar concentration might be different.
+So Kc is always the same.
+ for a certain reaction.
+But the concentrations
+ may worry.
+This is important.
+So let me just exemplify this.
+So I take the following reaction as an example.
+So here we have hydrogen gas.
+And this hydrogen gas, it is reacting with diiodine.
+ And at some point, we establish an equilibrium when we enrate hydrogen iodide.
+The expression for the equilibrium constant, it is the following.
+It is the concentration of the product raised to its stoichiometric coefficient divided by the concentrations of the reactants.
+ the value of this equilibrium constant.
+It is always 54.
+But we can have different combinations of the concentration of the three species in this reaction in order to get this value of the equilibrium constant.
+So just to exemplify this, I will just include some number.
+But we can think about one equilibrium situation
+ in which we have the following concentrations.
+So here in the first case, we have 0.10 molar of hydrogen gas.
+We have 0.20 molar of diiodine.
+And we have 1.04 molar of the product.
+And if we insert these numbers into the expression for the equilibrium constant,
+ what number are we going to get?
+We're going to get 54, because the equilibrium constant, it is always 54 for this reaction.
+And we can also have a look at another equilibrium.
+ So regardless if you are on this equilibrium or this equilibrium, the value of the equilibrium constant, it is the same.
+But the concentration, those might be different.
+So for example, in the second equilibrium, we have 0.30 molar of hydrogen gas.
+ we have 0.17 of the other reactant.
+And of the product, we have a concentration of 1.66 molar.
+And that give us an equilibrium constant, which is equal to what?
+ It is equal to 1.66 raised to the stoichiometric coefficient of two.
+And this is divided by the concentration of hydrogen gas multiplied by the concentration of diiodine.
+And what is the value of the equilibrium constant for the second equilibrium?
+It is...
+ 54. so please try to accept this that the concentrations at equilibriums those might be different but the value of the equilibrium constant it is always the same so if you know the concentrations
+ on the first equilibrium, you can use those values to calculate the equilibrium constant.
+That value you can use when you make calculations on another equilibrium.
+You don't understand it when I say it like this, but I will return to it.
+Just be sure about it.
+So now,
+ We have changed the camera because I'd like to work on this.
+Am I on the right?
+Change like this.
+No.
+Okay.
+So here we have a problem.
+And I said before, when we started this lecture,
+ that the collision theory will be important today.
+And in this problem, the collision theory is important to understand.
+And if you don't understand it today, please accept it before the exam.
+It's not iodine, it's bromine, so we have to correct like this.
+ And we are getting the value of the equilibrium constant.
+And that value, it is equal to, is it 10 rise to eight or six?
+Eight.
+Okay.
+ So this value we are provided.
+And what is the expression for the equilibrium constant?
+The expression, it is the concentration of hydrogen bromide at equilibrium divided by the concentration of hydrogen gas at equilibrium divided by the concentration of dibromine at equilibrium.
+ And in this problem, we are getting the following information.
+We are getting the concentrations before the reaction reaches equilibrium.
+So before the reaction reaches equilibrium, initial, it means the concentrations at the time of zero, before anything has happened in that reaction.
+So here we have 10 molar,
+ And of dibromine, we have how much?
+We have 0.10 molar.
+And of hydrogen gas, we have nothing.
+And when this reaction reaches its final destination,
+ which is equilibrium.
+The reaction stops and the concentration stops changing.
+So the mission we have here, it is to calculate the concentration of hydrogen gas at equilibrium.
+The second mission is to calculate the concentration of dibromide at equilibrium.
+And the third mission is to calculate the concentration of hydrogen bromide to equilibrium.
+ So now, based on the collision theory, which is the path towards equilibrium?
+It is in the forward direction, or it is in the reverse direction?
+Which is the path towards the equilibrium?
+If you want the reaction to move in the forward direction, you must have hydrogen gas,
+ colliding with D bromine.
+But we have nothing of hydrogen gas here, there is nothing.
+The dibromine have nothing of the hydrogen gas to collide with.
+So it means that the reaction in the beginning, it cannot happen in the forward direction.
+But we have plenty of hydrogen bromide.
+ These hydrogen bromide molecules, those are able to react in the reverse direction, like this.
+So it means when we're moving from the initial state to the equilibrium state, we will observe a change in concentrations.
+ So that means because the path towards the equilibrium is in the reverse direction, it means that the concentration of hydrogen gas is going to increase by X molar.
+ And we see that the stoichiometric coefficient is one for hydrogen gas and one for dibromine, which means that the concentration of dibromine, it's going to increase by X molar when we move from initial state to the equilibrium.
+But what is the change in concentration for hydrogen bromide?
+ the reaction is moving in the reverse direction.
+And if the concentration of the reactants is increasing, it means that the concentration of the product must increase.
+But now you have to be very careful, because here we have the stoichiometric coefficient of two.
+And for that reason, we get a decrease, a concentration of minus two x molar.
+ Like this.
+So that means the following.
+When this reaction reaches equilibrium, we have X molar of hydrogen gas.
+We have X molar of dibromide.
+And how much do we have of hydrogen bromide?
+We have 10 minus two X molar.
+And now the question comes, how shall we find the value for X?
+ Well, this here, it's the equilibrium concentration for hydrogen bromide.
+This X here, it is the concentration of hydrogen gas.
+And this X, it is the concentration of dibromine at equilibrium.
+ So if we insert the equilibrium concentrations into this expression, we have just one unknown, and that is x, and that x we're able to find.
+So what I do now, it is that into this expression number two, I insert the concentrations at equilibrium.
+So we are getting the following.
+That we insert the concentration of
+ hydrogen bromide rise to its stoichiometric coefficient of two.
+And then we have X molar of hydrogen gas at equilibrium multiplied by X molar of dibromide at equilibrium.
+This ratio we already know because that ratio is equal to the equilibrium constant.
+And that is
+ 5.0 times 10, raised to the power of eight.
+And if we solve this equation, we get the following solutions.
+We get one solution which is equal to 2.0 times 10, raised to the power of minus six molar.
+ Another solution, it is minus 0.10 molar.
+But which solution shall we use?
+We have two options.
+One positive and one negative.
+Have you ever seen minus one molar of anything?
+ No, because if we use this solution here, it means that we have a negative concentration of hydrogen gas and a negative concentration of dibromine at equilibrium.
+So for that reason, we exclude this solution.
+So that means that the value of X we shall use here, it is the X1 value like this.
+ So we put one like this.
+But you forgot to correct me here.
+Because this concentration is not X. It is 0.10.
+ Okay, excuse me.
+So that means that with X here, it must be corrected into this value here.
+So I write zero, 10, plus X. These are still the same, nothing happened.
+ So what are the concentrations at equilibrium?
+At this hydrogen, we get the concentration of 2.0 times 10 rise to the power of minus six.
+So that is the concentration of hydrogen gas.
+And then we have to calculate the concentration of dibromide at equilibrium
+ and it will be the following.
+It will be zero, 10, plus 2.0 times 10, rise to the power of minus six.
+ And this number here, it's extremely small compared to this number.
+So that means that we will not get any big change in the concentration of dibromide.
+So it means that here we have a concentration of zero, 10 molar, if you use two significant figures.
+And then we have to calculate the concentration of the hydrogen bromide at equilibrium.
+ And we are using the same procedure.
+So we have in the beginning, we have how much?
+We have 10 molar of hydrogen bromide minus two times the value of X1.
+ which gives 10 molar at equilibrium because this number, it is extremely small compared to this number.
+So that's why the concentration of hydrogen bromide, it will be essentially unaffected at equilibrium.
+This is a typical exam question.
+ So let us take a break.
+I think we all need it.
+So let's take a break until 17 minutes past 11.
+ Yes.
+ so what was the first thing i told you today almost the first thing at least which is the final destination of a chemical reaction it is equilibrium a reaction happens because it wants to reach equilibrium
+ But if the reaction is forced away from equilibrium for one reason or another reason, how do you think the reaction will respond on that?
+Yeah, it will fight back.
+And that brings us into Le Chatelier.
+Le Chatelier's principle.
+ And what La Châtellière claims it is that if a reaction, it is forced away from equilibrium, it will fight back in order to re-establish equilibrium.
+So I've write it that a reaction forced away
+ from equilibrium fights back in order to establish equilibrium.
+ or it's more proper to say re-establish equilibrium.
+So we have different ways to push a reaction out of equilibrium.
+And I will talk about two parameters we can use for pushing a reaction out of equilibrium.
+ So the first way to push a reaction out of equilibrium, it is by changing the concentrations of one species in the reaction equation.
+So I write concentration change.
+That's one way.
+ and a second way to push a reaction out of equilibrium.
+It is not always, but in some cases, by changing the volume.
+But let us start focusing on concentration change.
+ So let us assume the following.
+But here we have the following concentration when di-nitrogene establish equilibrium with nitrogen dioxide.
+So here, I don't know what this is called.
+This is called tipperbräda in Norwegian.
+I don't know.
+But here we have equilibrium.
+ But let us now assume the following, that we disturb this equilibrium by adding nitrogen dioxide.
+So what is going to happen now?
+We will get an increase in the concentration of nitrogen dioxide if we add more of nitrogen dioxide.
+So now,
+ The reaction, it is pushed away from equilibrium.
+It doesn't like this state because the equilibrium, it prefers to be in this equilibrium state.
+ So how is the reaction going to respond on this in order to re-establish equilibrium?
+ Yes, because as you can see here, you have an excess of the product and you have two less of the reactant.
+So reaction, it will react in the reverse direction until equilibrium is re-established.
+ So when you increase the concentration of the product at equilibrium, the reaction, it respond by reacting in the reverse direction until the equilibrium is re-established.
+And keep in mind,
+ that here we have one equilibrium, so you have the equilibrium constant is the same at this equilibrium as it is on this equilibrium.
+The equilibrium constant is always the same, but the concentrations, those might be different on two different equilibriums, but the equilibrium constant, it is the same.
+I will exemplify this in a while.
+ And then we can think about an opposite scenario.
+So we recycle the same reaction.
+But now we add more of the reactant, dinitrogen tetraoxide.
+ So what is going to happen now when we increase the concentration of the reactant?
+What is going to happen now, it is that we will get an excess of the reactant.
+So we will get a scenario like this.
+ So how is the reaction now going to behave in order to reestablish equilibrium?
+Because now we have an excess of the reactant.
+The reaction, it wants to return to the equilibrium.
+So that means that the reaction, it will react in the forward direction until a new equilibrium is established.
+ So to summarize, if you add more of the product, the reaction, it will react in the reverse direction until equilibrium is re-established.
+ And on the opposite, when we add more of the reactant, we get an excess of the reactant, which means that the reaction, it will respond by reacting in a forward direction until the equilibrium is reestablished.
+And that brings us into this problem here.
+So of course I have it wrong.
+ I will give you one minute to think about it.
+So it's one thing, if I've done my job good enough today, there is one question you should be able to answer at this point.
+What is the equilibrium constant in A and B?
+Are they the same or are they different?
+ same because the equilibrium constant is always the same, but the concentrations might be different at different equilibriums.
+So if I try just to make a picture here to present this.
+ So here we have an initial equilibrium.
+And in this initial equilibrium, we have hydrogen gas reacting with diiodine, and we generate
+ to hydrogen iodide molecules.
+And we get the information that in equilibrium, we have 0.20 molar of hydrogen gas.
+And we also have a concentration of diiodine, which is equal to 0.10 molar.
+ And we also provided with the concentration of hydrogen iodide.
+It is 1.04 molar.
+And the mission we have here in the A problem, it is to calculate the equilibrium constant.
+So the first thing we have to do, it is to
+ write the expression for the equilibrium constant, and that is hydrogen iodide raised to the power of two.
+And then we insert the equilibrium concentrations into this equation.
+So we get 1.04 divided by one, 20,
+ multiplied by 0, 1, 10.
+And that gives an equilibrium constant of 54.
+So that is the A problem.
+But what is going to happen now,
+ when I continue with part problem B. It is the following, that we disturb the equilibrium for this reaction.
+And we disturb this equilibrium by adding more of hydrogen iodide.
+So what is going to happen now, it is that,
+ The reaction is pushed out from equilibrium because what has happened now, just after adding more of the hydrogen iodide, it is that in the initial state we have 0.20
+ of hydrogen and we have 0.10 of diiodine.
+This concentration here for hydrogen iodide, it has increased from 1.04 up to 10 molar.
+ And the reaction, it is certainly not satisfied in this state.
+So what is going to happen now?
+So what the reaction is doing, it is that it is trying to find a solution of his problem.
+And the solution of his problem, it is to react in the reverse direction.
+And this is going to happen
+ until the equilibrium is re-established.
+So it means that when we move it from these conditions, when we have no equilibrium, to the new equilibrium, we will get
+ changes in the concentrations.
+Because the reaction is moving in the forward direction, it means that the concentration of hydrogen gas, it's 0.20 minus X molar.
+And for diiodine, we have 0.10 minus X molar.
+ Sorry, sorry, sorry, sorry.
+The reaction is moving backwards.
+So it means we are increasing the concentration by plus X. Sorry.
+And here we have the same increase in concentration.
+But because we are increasing the concentration of the reactant,
+ it means, of course, that we're decreasing the concentration of the product because the reaction is moving in the reverse direction.
+So what is happening here?
+What is happening here, it is that we get the initial concentration minus the change in concentration, which is minus 2x.
+And the reason for putting 2 here, it is because we have the stoichiometric coefficient 2 of hydrogen iodide.
+ And this is the mission we have in this problem, that we are going to decide the concentrations at the new equilibrium.
+Here, in the first equilibrium, we know the value of the equilibrium constant.
+What is the equilibrium constant when the equilibrium is re-established?
+ One time more.
+54, it's not changed.
+The concentration has changed, but not the equilibrium constant.
+It is still the same.
+So what we can do now in order to find the values of the X here, it is to insert the equilibrium concentrations into this formula here.
+ So let us do that.
+We insert the equilibrium concentrations into this formula.
+So what do we get?
+We get 10 minus two x. But it was not 10, it should be two here.
+Sorry.
+We increase to two, not to 10.
+ So we get two minus two x, raised to the power of the stoichiometric coefficient.
+And then we divide by the concentration at equilibrium, the new equilibrium of hydrogen gas, multiplied by the concentration of diiodine,
+ at equilibrium and this is equal to 54 equilibrium constant it is always 54 for this reaction and then we solve this equation and we get two solutions we get one for x1 and one for x2 one solution it is
+ The other solution, it is minus 0.58 molar.
+So now the question comes, should we use X1 or X2?
+ Well, if we use this solution here, it will give us a negative concentration of diiodine.
+So this solution we can exclude.
+So the solution we're going to use, it is this one here, which means that this X here, it is X1, X1.
+ So what is the concentration of hydrogen gas at the new equilibrium?
+So it is 0.30 of dihydrogen gas.
+Of diiodine, we get 0.20 molar, and we use this number here,
+ for calculating the concentration of hydrogen iodide at equilibrium.
+And that give us 1.8 molar.
+So this is the essential part here as I mentioned for the third time now.
+The equilibrium constant
+ it is always the same for a certain reaction.
+But the concentrations at different equilibriums might be different.
+And quite many times, this has been an essential point on the exam, so just keep that in mind.
+I'm not promising it will happen this year, but it has happened before.
+ So, and it is almost Friday.
+Weekend, perhaps.
+So the last thing we are going to look into, it is the volume change.
+And I will be very honest to you now.
+I don't know how to explain this in a good way.
+I've been thinking much about it, but I don't have any good explanation.
+ If you ask artificial intelligence, perhaps you will get a better explanation, but I find it very difficult to explain this.
+But I will do my best at least.
+So we'll look into volume change.
+So.
+ When we change the volume of a reaction at equilibrium, we in some cases put it out of equilibrium.
+So let us assume the following here, that here we have a reaction vessel.
+And in this reaction vessel, we have the following reaction at equilibrium.
+ And what we are doing now in order to force this reaction out of equilibrium, it is to increase the volume.
+So now we increase the volume.
+ And the consequence out of this is that the reaction is pushed away from its equilibrium.
+But if we disturb the equilibrium by increasing the volume, which will be the path back to the equilibrium.
+ I like to think about it in this way.
+But here, according to the stoichiometric coefficients 1 and 2, it means that you have one mole of this type of molecules at equilibrium.
+Here, you have two moles of the product.
+ When you increase the volume, you get more space for molecules to move inside.
+So that means that the reaction, it respond by moving in the direction which increases the number of gas molecules.
+Because here we have one molecule which becomes two molecules when it's converted into the product.
+So we can say like this, when
+ The volume is increased.
+The reaction responds by reacting
+ in the direction increasing number of gas molecules.
+ But let's think about the opposite scenario.
+When we instead decrease the volume.
+ So let us recycle the same reaction one time more.
+So here we have this reaction at equilibrium.
+Like this.
+And what we do now, it is not to increase the volume,
+ but to decrease the volume.
+So we're moving from a larger volume to a smaller volume.
+And this equilibrium here
+ It was destroyed when we decreased the volume.
+So what is the direction back to the equilibrium now?
+Should we increase the number of gas molecules?
+Or should we increase the number of gas molecules when you reduce the volume?
+When you reduce the volume, yes?
+ Yes, and which is the direction to decrease the number of molecules?
+Yes, because when this reaction goes backwards, two molecules become one.
+And that is actually what is happening when you reduce the volume.
+The reaction, it goes into the direction that reduces the number of molecules.
+But if you have the same number of molecules,
+ think about this scenario instead.
+But here, you have this reaction.
+Here, according to the stoichiometric coefficients, you have two moles of gas, and you have equilibrium.
+ And what you do now, it is that you change the volume.
+Let's assume that we increase the volume.
+So which is the path back to equilibrium now?
+ In fact, if this reaction moves backwards, two molecules becomes two other molecules.
+If this reaction moves forward, two molecules becomes two other molecules.
+In this case, when you have equal number of molecules on both sides, the equilibrium, it is not destroyed when you change the volume.
+So nothing is going to happen.
+ So the equilibrium, it's still maintained even though we changed the volume.
+But that's not the case when we have different number of molecules on the left side and the right side based on the stoichiometric coefficient.
+So here, because we have two on both sides, it means that equilibrium
+ is not disturbed due to change in equilibrium.
+ What did I say?
+Change, sorry, sorry.
+Should be in volume here, of course, like this.
+And it was my final words of today's lecture.
+And I wish you all a nice weekend, and I hope to see you next week.

@@ -8,10 +8,13 @@ Komplett pipeline for å laste ned forelesninger fra Panopto, transkribere med W
 ALTS/
 ├── venv/                    # Python virtual environment
 ├── downloads/               # yt-dlp temp, MP4 under prosessering, MP3 arkiv
+│   └── EMNEKODE_YYYY-MM-DD.mp3
 ├── transcriptions/          # Transkripsjonsfiler (.txt)
+│   └── EMNEKODE_YYYY-MM-DD.txt
 ├── forelesninger/           # Strukturerte oppsummeringer (.md)
 │   └── EMNEKODE/
 │       └── YYYY_måned/
+│           └── EMNEKODE_DD.MM.YY.md
 ├── pipeline.py             # 🚀 Alt-i-ett: Download → Transcribe → Summarize
 ├── download.py             # Last ned fra Panopto → MP3
 ├── transcribe.py           # Transkriber med WhisperX
@@ -271,9 +274,9 @@ python regenerate_summaries.py --dry-run  # Se endringer
 python regenerate_summaries.py            # Utfør
 
 # Ferdig! Resultat:
-# - downloads/KJE101_2025-10-03.mp3                           (lydfil)
-# - transcriptions/KJE101_2025-10-03.txt                      (transkript)
-# - forelesninger/KJE101/2025_oktober/KJE101_2025-10-03.md   (oppsummering)
+# - downloads/KJE101_2025-10-03.mp3                       (lydfil)
+# - transcriptions/KJE101_2025-10-03.txt                  (transkript)
+# - forelesninger/KJE101/2025_oktober/KJE101_03.10.25.md (oppsummering)
 # - Automatisk committed og pushet til Git ✨
 ```
 
@@ -300,10 +303,11 @@ Du kan redigere `prompt.md` for å tilpasse til dine behov!
 ## Systemkrav
 
 ### Påkrevd programvare
+
 - **Python 3.12**
 - **NVIDIA GPU** med CUDA-støtte
-- **ffmpeg** - For audio/video-konvertering
-- **yt-dlp** - For Panopto-nedlasting
+- **ffmpeg** - **Påkrevd systemavhengighet.** For audio/video-konvertering. Må installeres med en system-pakkebehandler (f.eks. `sudo apt install ffmpeg` eller `sudo pacman -S ffmpeg`).
+- **yt-dlp** - **Påkrevd systemavhengighet.** For Panopto-nedlasting. Må installeres med en system-pakkebehandler (f.eks. `sudo apt install yt-dlp` eller `sudo pacman -S yt-dlp`).
 
 ### Python-pakker (i venv)
 - **whisperx** - AI transkribering
@@ -323,11 +327,19 @@ Du kan redigere `prompt.md` for å tilpasse til dine behov!
 
 ## Feilsøking
 
-### "Library libcublas.so.12 is not found"
+### "Library libcublas.so.12 is not found" eller cudnn-feil
 
-Dette er automatisk fikset i `venv/bin/activate`. Sørg for at du aktiverer venv:
+CUDA-bibliotekene (cublas, cudnn) ligger i venv, men Python må vite hvor de er. Dette er automatisk fikset i `venv/bin/activate` som setter `LD_LIBRARY_PATH`.
+
+**Løsning:** Aktiver (eller reaktiver) venv:
 ```bash
+deactivate  # hvis allerede aktivert
 source venv/bin/activate
+```
+
+Verifiser at det fungerer:
+```bash
+echo $LD_LIBRARY_PATH  # skal inneholde paths til nvidia/cublas og nvidia/cudnn
 ```
 
 ### "No default align-model for language: sv/no"
