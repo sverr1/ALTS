@@ -2,12 +2,15 @@
 venv/
 .env
 
+
 # Sensitive files
 cookies.txt
 
 # Downloads (large audio/video files - not needed in Git)
+transcriptions/
 downloads/
 
+transcri
 # Audio/video files anywhere
 *.mp3
 *.mp4
@@ -33,4 +36,10 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# Annet snacks
+handoff.md
+CLAUDE.md
+.git
 Thumbs.db
+
