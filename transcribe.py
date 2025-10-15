@@ -19,6 +19,11 @@ def transcribe_with_whisperx(audio_file, model_size="large-v3", batch_size=16, c
         verbose: If True, show detailed transcription output (default: False)
     """
     device = "cuda"
+    import torch
+
+    # Clear GPU memory before starting
+    gc.collect()
+    torch.cuda.empty_cache()
 
     print(f"  Loading model '{model_size}'...", end='', flush=True)
     model = whisperx.load_model(model_size, device, compute_type=compute_type)
@@ -27,11 +32,28 @@ def transcribe_with_whisperx(audio_file, model_size="large-v3", batch_size=16, c
     print(f"  Transcribing audio...", end='', flush=True)
     audio = whisperx.load_audio(audio_file)
 
-    if language:
-        result = model.transcribe(audio, batch_size=batch_size, language=language)
-    else:
-        result = model.transcribe(audio, batch_size=batch_size)
-    print(" ✓")
+    # Try with given batch_size, reduce if OOM
+    current_batch_size = batch_size
+    while current_batch_size >= 1:
+        try:
+            if language:
+                result = model.transcribe(audio, batch_size=current_batch_size, language=language)
+            else:
+                result = model.transcribe(audio, batch_size=current_batch_size)
+            print(" ✓")
+            break
+        except RuntimeError as e:
+            if "out of memory" in str(e):
+                # Clear memory and retry with smaller batch
+                gc.collect()
+                torch.cuda.empty_cache()
+                current_batch_size = current_batch_size // 2
+                if current_batch_size < 1:
+                    print(f"\n  Error: GPU out of memory even with batch_size=1")
+                    raise
+                print(f"\n  GPU OOM - retrying with batch_size={current_batch_size}...", end='', flush=True)
+            else:
+                raise
 
     if verbose:
         print(f"\n  Detected language: '{result['language']}'")

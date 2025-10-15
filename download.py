@@ -62,39 +62,24 @@ def get_video_id(url):
 def download_video(url, video_id):
     """
     Downloads the video with the given ID to the 'downloads' directory.
-    Shows progress on a single updating line.
+    Shows minimal progress output.
     """
-    command = f"yt-dlp --cookies cookies.txt -f {video_id} -P downloads --progress {url}"
+    command = f"yt-dlp --cookies cookies.txt -f {video_id} -P downloads --no-progress {url}"
     print(f"  Downloading video...", end='', flush=True)
 
-    process = subprocess.Popen(
+    result = subprocess.run(
         command,
         shell=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True,
-        bufsize=1
+        capture_output=True,
+        text=True
     )
 
-    # Track progress on single line
-    last_line = ""
-    for line in process.stdout:
-        line = line.strip()
-        if line:
-            # Show only download progress lines
-            if '[download]' in line and '%' in line:
-                # Clear previous line and show new progress
-                print(f"\r  Downloading: {line}", end='', flush=True)
-                last_line = line
-            elif 'Destination:' in line or 'has already been downloaded' in line:
-                if last_line:
-                    print()  # New line after progress
-                print(f"  {line}")
-                last_line = ""
-
-    process.wait()
-    if last_line:
-        print()  # New line after final progress
+    if result.returncode == 0:
+        print(" ✓")
+    else:
+        print(f" (error)")
+        if result.stderr:
+            print(f"  {result.stderr}")
 
 def convert_to_audio(video_path):
     """
