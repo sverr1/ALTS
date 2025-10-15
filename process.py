@@ -5,7 +5,7 @@ import subprocess
 from pathlib import Path
 from openai import OpenAI
 from dotenv import load_dotenv
-from utils import get_summary_filepath, parse_filename_details
+from utils import get_summary_filepath, parse_filename_details, validate_git_setup
 
 # Chunking configuration for large transcriptions
 # 3-hour lecture ~36k tokens. 150k chars ~ 37.5k tokens.
@@ -59,10 +59,9 @@ def process_transcription(transcription_text, system_prompt, model="anthropic/cl
         api_key=api_key
     )
 
-    print(f"Processing transcription with {model}...")
-    print(f"Transcription length: {len(transcription_text)} characters")
+    print(f"  Processing with {model}...", end='', flush=True)
 
-    def get_summary_for_text(text: str, is_final_summary: bool = False) -> str:
+    def get_summary_for_text(text: str, is_final_summary: bool = False, show_progress: bool = False) -> str:
         """Helper function to get summary for a single text chunk."""
         system_msg = (
             "You are an expert summarizer. Create a detailed, structured summary of the following lecture transcript. Use Markdown formatting."
@@ -83,27 +82,27 @@ def process_transcription(transcription_text, system_prompt, model="anthropic/cl
                 max_tokens=16000
             )
             result = response.choices[0].message.content or ""
-            if not is_final_summary:
-                print(f"  ✓ Processed chunk ({response.usage.total_tokens} tokens used)")
-            else:
-                print(f"  ✓ Final synthesis complete ({response.usage.total_tokens} tokens used)")
+            if show_progress:
+                if not is_final_summary:
+                    print(f"\n    ✓ Chunk processed ({response.usage.total_tokens} tokens)")
+                else:
+                    print(f"\n    ✓ Final synthesis ({response.usage.total_tokens} tokens)")
             return result
         except Exception as e:
             return f"Error during summarization: {e}"
 
     # Check if transcription is short enough for single request
     if len(transcription_text) <= CHUNK_SIZE:
-        print("Transcription is short enough, processing in single request...")
         try:
             summary = get_summary_for_text(transcription_text)
-            print(f"✓ Processing complete")
+            print(" ✓")
             return summary
         except Exception as e:
-            print(f"Error calling OpenRouter API: {e}")
+            print(f"\n  Error calling OpenRouter API: {e}")
             sys.exit(1)
 
     # Hierarchical summarization (chunking)
-    print(f"Transcription is too long ({len(transcription_text)} chars). Using hierarchical summarization...")
+    print(f"\n  Large transcript ({len(transcription_text)} chars) - using chunking")
     chunks = []
     start = 0
     while start < len(transcription_text):
@@ -111,17 +110,17 @@ def process_transcription(transcription_text, system_prompt, model="anthropic/cl
         chunks.append(transcription_text[start:end])
         start = end - CHUNK_OVERLAP
 
-    print(f"Split into {len(chunks)} chunks with {CHUNK_OVERLAP} char overlap")
+    print(f"  Processing {len(chunks)} chunks...")
 
     # Summarize each chunk
     partial_summaries = []
     for i, chunk in enumerate(chunks, 1):
-        print(f"Processing chunk {i}/{len(chunks)}...")
-        summary = get_summary_for_text(chunk)
+        print(f"    Chunk {i}/{len(chunks)}...", end='', flush=True)
+        summary = get_summary_for_text(chunk, show_progress=True)
         partial_summaries.append(f"### Summary of Part {i}\n\n{summary}")
 
     # Combine partial summaries into final summary
-    print("Combining partial summaries into final summary...")
+    print(f"  Synthesizing final summary...", end='', flush=True)
     final_summary_prompt = (
         f"{system_prompt}\n\n---\n\n"
         "Combine these partial summaries into one single, coherent summary:\n\n"
@@ -129,11 +128,10 @@ def process_transcription(transcription_text, system_prompt, model="anthropic/cl
     )
 
     try:
-        final_summary = get_summary_for_text(final_summary_prompt, is_final_summary=True)
-        print(f"✓ Hierarchical processing complete")
+        final_summary = get_summary_for_text(final_summary_prompt, is_final_summary=True, show_progress=True)
         return final_summary
     except Exception as e:
-        print(f"Error during final synthesis: {e}")
+        print(f"\n  Error during final synthesis: {e}")
         sys.exit(1)
 
 def save_summary(summary_text, transcription_file):
@@ -152,12 +150,12 @@ def save_summary(summary_text, transcription_file):
     with open(summary_file, 'w', encoding='utf-8') as f:
         f.write(summary_text)
 
-    print(f"✓ Summary saved: {summary_file}")
+    print(f"  Saved to: {summary_file}")
     return summary_file
 
 def git_publish(summary_file, emnekode, date_str):
     """
-    Publish summary to Git repository.
+    Publish summary to Git repository with improved error handling.
 
     Args:
         summary_file: Path to the summary file
@@ -181,44 +179,47 @@ def git_publish(summary_file, emnekode, date_str):
         except FileNotFoundError:
             return 127, "", "git command not found"
 
-    print("\n📤 Publishing to Git...")
+    print(f"  Publishing to Git...", end='', flush=True)
 
-    # Check if this is a git repo
-    rc, _, _ = run_git_cmd("rev-parse", "--is-inside-work-tree")
-    if rc != 0:
-        print("⚠️  Warning: Not a Git repository. Skipping git publish.")
-        print("   To enable: git init && git remote add origin <url>")
+    # Validate Git setup first
+    git_status = validate_git_setup(verbose=False)
+
+    if not git_status["is_git_repo"]:
+        print(" (skipped - not a Git repo)")
+        return
+
+    if not git_status["can_commit"]:
+        print(" (skipped - Git user not configured)")
         return
 
     # Add the summary file
     rc, _, err = run_git_cmd("add", summary_file)
     if rc != 0:
-        print(f"❌ Git add failed: {err}")
+        print(f" (failed - {err})")
         return
 
     # Check if there are staged changes
     rc, _, _ = run_git_cmd("diff", "--cached", "--quiet")
     if rc == 0:
-        print("ℹ️  No changes to commit")
+        print(" (no changes)")
         return
 
     # Commit
     commit_msg = f"ALTS: {emnekode} {date_str} - forelesningsnotat"
     rc, _, err = run_git_cmd("commit", "-m", commit_msg)
     if rc != 0:
-        print(f"❌ Git commit failed: {err}")
+        print(f" (failed - {err})")
         return
 
-    print(f"✓ Committed: {commit_msg}")
-
-    # Push
-    rc, out, err = run_git_cmd("push")
-    if rc != 0:
-        print(f"⚠️  Git push failed: {err}")
-        print("   You may need to configure remote or push manually")
+    # Push (only if remote is configured)
+    if git_status["has_remote"]:
+        rc, out, err = run_git_cmd("push")
+        if rc != 0:
+            print(f" (push failed - {err})")
+        else:
+            print(" ✓")
     else:
-        print("✓ Pushed to remote repository")
-        print(f"\n🎉 Summary published successfully!")
+        print(" ✓ (local only)")
 
 def run_process(transcription_file: str, model: str, temperature: float, no_publish: bool) -> str | None:
     """Runs the processing logic for a given transcription file.
@@ -238,8 +239,6 @@ def run_process(transcription_file: str, model: str, temperature: float, no_publ
         print(f"✓ Summary already exists: {summary_file}")
         print(f"  Skipping processing.")
         return summary_file
-    else:
-        print(f"  Summary not found, will create: {summary_file}")
 
     system_prompt = load_prompt()
     transcription = load_transcription(transcription_file)
@@ -253,18 +252,11 @@ def run_process(transcription_file: str, model: str, temperature: float, no_publ
 
     summary_file = save_summary(summary, transcription_file)
 
-    print(f"\n✓ Processing complete!")
-    print(f"  Input:  {transcription_file}")
-    print(f"  Output: {summary_file}")
-
     if not no_publish:
-        details = parse_filename_details(transcription_file)
+        details = parse_filename_details(transcription_file, verbose=False)
         if details:
             git_publish(summary_file, details['course_code'], details['full_date'])
-        else:
-            print("\n⚠️  Could not extract course code/date for Git commit")
-            print("   Skipping Git publish. Use --no-publish to suppress this warning.")
-    
+
     return summary_file
 
 def main():

@@ -22,8 +22,15 @@ def parse_filename_to_mp3(filename):
     Parse Panopto filename and convert to expected MP3 format.
     Example: "FYS102-1 25H Lecture..." -> "FYS102_2025-10-03.mp3"
     """
-    # Extract emnekode from the filename
-    emnekode = filename.split(" ")[0]
+    # Extract emnekode from the filename (first part before space)
+    emnekode_raw = filename.split(" ")[0]
+
+    # Remove lecture number suffix (e.g., "FYS102-1" → "FYS102")
+    emnekode_match = re.match(r'^([A-Z]+\d+)', emnekode_raw)
+    if emnekode_match:
+        emnekode = emnekode_match.group(1)
+    else:
+        emnekode = emnekode_raw  # Fallback
 
     # Extract date from the filename
     match = re.search(r"(\d{2})\.(\d{2})\.(\d{4})", filename)
@@ -55,11 +62,39 @@ def get_video_id(url):
 def download_video(url, video_id):
     """
     Downloads the video with the given ID to the 'downloads' directory.
+    Shows progress on a single updating line.
     """
-    # The -P flag directs all output, including temporary files, to the specified directory.
-    command = f"yt-dlp --cookies cookies.txt -f {video_id} -P downloads {url}"
-    print(f"Running command: {command}")
-    subprocess.run(command, shell=True)
+    command = f"yt-dlp --cookies cookies.txt -f {video_id} -P downloads --progress {url}"
+    print(f"  Downloading video...", end='', flush=True)
+
+    process = subprocess.Popen(
+        command,
+        shell=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        bufsize=1
+    )
+
+    # Track progress on single line
+    last_line = ""
+    for line in process.stdout:
+        line = line.strip()
+        if line:
+            # Show only download progress lines
+            if '[download]' in line and '%' in line:
+                # Clear previous line and show new progress
+                print(f"\r  Downloading: {line}", end='', flush=True)
+                last_line = line
+            elif 'Destination:' in line or 'has already been downloaded' in line:
+                if last_line:
+                    print()  # New line after progress
+                print(f"  {line}")
+                last_line = ""
+
+    process.wait()
+    if last_line:
+        print()  # New line after final progress
 
 def convert_to_audio(video_path):
     """
